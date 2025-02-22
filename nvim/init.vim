@@ -1,0 +1,10 @@
+set cursorline
+set number
+set relativenumber
+set tabstop=2
+set shiftwidth=4
+set autoindent
+set ttyfast
+syntax on
+set nowrap
+set scrolloff=20
