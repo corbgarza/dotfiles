@@ -56,5 +56,4 @@ alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias alacrittyconfig='nvim ~/.config/alacritty.yml'
 alias search="cd / && fzf -e"
 alias bat="batcat"
-PS1="%~ >>> "
 precmd() { print "" }

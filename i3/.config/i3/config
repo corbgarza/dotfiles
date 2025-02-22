@@ -77,7 +77,7 @@ gaps top 25
 #custom shit
 exec_always nitrogen --restore
 exec_always --no-startup-id picom --config ~/.config/picom.conf
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id polybar
 exec_always --no-startup-id xrandr --output DP-4 --primary
 exec_always --no-startup-id xrandr --output DP-0 --off
 exec_always --no-startup-id xrandr --output HDMI-0 --off
