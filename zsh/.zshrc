@@ -52,7 +52,7 @@ alias picomconfig="nvim ~/.config/picom.conf"
 alias polybarconfig="nvim ~/.config/polybar/config.ini"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias alacrittyconfig='nvim ~/.config/alacritty.yml'
-alias search="cd / && fzf -e"
+alias search="cd /; fzf -e; cd -"
 alias bat="batcat"
 alias LS="ls -A --color=tty"
 alias i="sudo apt-get update && sudo apt-get install -y "
