@@ -58,3 +58,4 @@ alias LS="ls -A --color=tty"
 alias i="sudo apt-get update && sudo apt-get install -y "
 precmd() { print "" }
 PROMPT="%n$PROMPT"
+EDITOR=nvim
