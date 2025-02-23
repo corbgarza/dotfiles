@@ -47,7 +47,7 @@ setopt hist_find_no_dups
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #custom shit
-PATH=$PATH:$HOME/.local/bin:$HOME/Documents/myscripts
+PATH=$PATH:$HOME/.local/bin:$HOME/myscripts
 alias zshconfig="nvim ~/.zshrc"
 alias i3config="nvim ~/.config/i3/config"
 alias picomconfig="nvim ~/.config/picom.conf"
