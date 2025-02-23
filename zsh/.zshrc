@@ -4,8 +4,6 @@ COMPLETION_WATIING_DOTS="true"
 HIST_STAMPS="mm/dd/yyyy"
 #plugins=(git aliases web-search)
 source $ZSH/oh-my-zsh.sh
-alias LS="ls -A --color=tty"
-alias i="sudo apt-get update && sudo apt-get install -y "
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -56,4 +54,6 @@ alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias alacrittyconfig='nvim ~/.config/alacritty.yml'
 alias search="cd / && fzf -e"
 alias bat="batcat"
+alias LS="ls -A --color=tty"
+alias i="sudo apt-get update && sudo apt-get install -y "
 precmd() { print "" }
