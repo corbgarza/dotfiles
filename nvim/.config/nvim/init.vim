@@ -1,4 +1,3 @@
-set cursorline
 set number
 set relativenumber
 set tabstop=2
