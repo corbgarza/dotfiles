@@ -5,3 +5,22 @@ window:
 cursor:
   style: Beam
   blinking: Always
+font:
+  normal:
+    family: MesloLGSNerdFont
+    style: Regular
+
+  bold:
+    family: MesloLGSNerdFont
+    style: Bold
+
+  italic:
+    family: MesloLGSNerdFont
+    style: Italic
+
+  bold_italic:
+    family: MesloLGSNerdFont
+    style: Bold Italic
+
+  size: 11.0
+

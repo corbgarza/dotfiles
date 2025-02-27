@@ -3,7 +3,7 @@ alias i3config="nvim ~/.config/i3/config"
 alias picomconfig="nvim ~/.config/picom.conf"
 alias polybarconfig="nvim ~/.config/polybar/config.ini"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
-alias alacrittyconfig='nvim ~/.config/alacritty.yml'
+alias alacrittyconfig='nvim ~/.config/alacritty.toml'
 alias search="cd /; fzf -e; cd -"
 alias LS="ls -A --color=tty"
 alias i="sudo apt-get update && sudo apt-get install -y "
@@ -33,7 +33,7 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 
-PATH=$PATH:$HOME/.local/bin:$HOME/myscripts
+PATH=$PATH:$HOME/.local/bin:$HOME/myscripts:$HOME/.cargo/bin
 
 source ~/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -43,3 +43,4 @@ source ~/plugins/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fpath+=${ZDOTDIR:-~}/.zsh_functions
