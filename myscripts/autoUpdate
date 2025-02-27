@@ -1,6 +1,0 @@
-#!/usr/bin/zsh
-nohup sudo apt update -y & 
-nohup sudo apt upgrade -y & 
-nohup sudo apt autoremove -y &
-nohup sudo apt autoclean -y & 
-nohup tldr --update &

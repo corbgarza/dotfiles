@@ -1,0 +1,11 @@
+#!/usr/bin/zsh
+nohup sudo apt update -y & 
+echo "\n###update complete\n"
+nohup sudo apt upgrade -y & 
+echo "\n###upgrade complete\n"
+nohup sudo apt autoremove -y &
+echo "\n###autroremove complete\n"
+nohup sudo apt autoclean -y &
+echo "\n###autoclean complete\n"
+nohup tldr --update &
+echo "\n###tldr update complete"
