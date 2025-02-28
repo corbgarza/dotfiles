@@ -1,4 +1,5 @@
 #!/usr/bin/zsh
+sudo whoami
 nohup sudo apt update -y & 
 echo "\n###update complete\n"
 nohup sudo apt upgrade -y & 
