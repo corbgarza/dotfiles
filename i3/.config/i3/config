@@ -1,6 +1,6 @@
 # My i3 config file (duckie)
 
-font pango:Cantarell 14
+font pango:Cantarell 10
 
 set $mod Mod4
 
@@ -61,7 +61,9 @@ client.background       #ffffff
 
 gaps inner 5
 gaps outer 5
+gaps top 15
 
+exec_always killall -q polybar
 exec_always nitrogen --restore
 exec_always --no-startup-id picom --config ~/.config/picom.conf
 exec_always --no-startup-id polybar
