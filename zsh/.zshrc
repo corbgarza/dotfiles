@@ -41,7 +41,7 @@ PATH=$PATH:$HOME/.local/bin:$HOME/myscripts:$HOME/.cargo/bin
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 source ~/repos/powerlevel10k/powerlevel10k.zsh-theme
-source ~/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
