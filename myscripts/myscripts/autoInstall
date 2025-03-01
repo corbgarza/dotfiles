@@ -1,5 +1,5 @@
 #my default apt pkgs
-sudo apt install -y bat brave-browser curl freecad ffmpeg fzf gimp git i3 nitrogen openssh-client openssh-server picom polybar python3 snapd stow tealdeer wget zoxide zsh
+sudo apt install -y bat brave-browser clonezilla curl freecad ffmpeg fzf gimp git i3 nitrogen openssh-client openssh-server picom polybar python3 snapd stow tealdeer wget zoxide zsh
 
 #neovim dependencies
 sudo apt-get install ninja-build gettext cmake curl build-essential
@@ -15,9 +15,7 @@ sudo apt install cmake g++ pkg-config libfreetype6-dev libfontconfig1-dev libxcb
 
 mkdir -p ~/repos
 cd ~/repos
-
-alacrittyrepo="https://github.com/alacritty/alacritty.git"
-git clone alacrittyrepo
+git clone https://github.com/alacritty/alacritty.git
 cd alacritty
 cargo build --release
 sudo mv target/release/alacritty /usr/bin
@@ -26,30 +24,25 @@ sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 
 cd ~/repos
-neovimrepo="https://github.com/neovim/neovim"
-git clone neovimrepo
+git clone https://github.com/neovim/neovim
 cd neovim
 sudo make install
 
 cd ~/repos
-kickstartnvimrepo="https://github.com/nvim-lua/kickstart.nvim.git"
-git clone kickstartnvimrepo ~/.config/nvim/
+git clone  https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim/
 
 cd ~/repos
-powerlevel10krepo="https://github.com/romkatv/powerlevel10k.git"
-git clone --depth=1 powerlevel10krepo
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git
 
 cd ~/repos
-yazirepo="https://github.com/sxyazi/yazi.git"
-git clone yazirepo
+git clone https://github.com/sxyazi/yazi.git
 cd yazi
 cargo build --release --locked
 
 cd ~/repos
-zshsyntaxhighlightingrepo="https://github.com/zsh-users/zsh-syntax-highlighting.git"
-git clone zshsyntaxhighlightingrepo
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 cd ~/
-git clone "https://github.com/corbgarza/dotfiles"
+git clone https://github.com/corbgarza/dotfiles
 cd dotfiles
-stow alacritty p10k zsh nvim i3 picom polybar myscripts
+stow .
