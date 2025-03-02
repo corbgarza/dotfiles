@@ -1,5 +1,5 @@
 #my default apt pkgs
-sudo apt install -y bat curl fzf git i3 i3-blocks lightdm nitrogen nm-tray openssh-client openssh-server picom polybar pulseaudio snapd stow tealdeer wget x11-xserver-utils zoxide zsh
+sudo apt install -y bat curl fzf git i3 i3-blocks lightdm network-manager nitrogen nm-tray openssh-client openssh-server picom polybar pulseaudio snapd stow tealdeer wget x11-xserver-utils zoxide zsh
 
 sudo apt install -y brave-browser clonezille freecad ffmpeg gimp python3
 
