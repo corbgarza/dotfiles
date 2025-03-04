@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 alias zshconfig="nvim ~/.zshrc"
 alias i3config="nvim ~/.config/i3/config"
 alias picomconfig="nvim ~/.config/picom.conf"
@@ -13,7 +14,6 @@ alias sd="sudo shutdown now"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 autoload -U compinit && compinit
 
