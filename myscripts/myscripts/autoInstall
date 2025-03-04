@@ -25,6 +25,7 @@ scp corbing@192.168.1.9:~/.ssh/id_github ~/.ssh/
 ssh-agent
 ssh-add ~/.ssh/id_github
 git remote set-url --push origin git@github.com:corbgarza/dotfiles
+git config core.editor nvim
 stow alacritty i3 myscripts p10k picom zsh
 
 sudo cp ~/dotfiles/fonts/* /usr/local/share/fonts/
