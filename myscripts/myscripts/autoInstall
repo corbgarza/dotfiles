@@ -7,7 +7,7 @@ sudo apt install -y bat build-essential cargo cmake curl ffmpeg fzf g++ gettext 
 sudo snap install brave
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | /bin/bash
 
-mkdir ~/repos
+mkdir ~/repos ~/Pictures
 cd ~/repos
 git clone  https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim/
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git
@@ -26,7 +26,6 @@ ssh-agent
 ssh-add ~/.ssh/id_github
 git remote set-url --push origin git@github.com:corbgarza/dotfiles
 git config core.editor nvim
-stow alacritty i3 myscripts p10k picom zsh
 
 sudo cp ~/dotfiles/fonts/* /usr/local/share/fonts/
 cp ~/dotfiles/animeLauren.png ~/Pictures/
