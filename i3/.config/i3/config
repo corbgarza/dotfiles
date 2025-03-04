@@ -67,7 +67,5 @@ position top
 status_command i3blocks 
 }
 
-#exec_always killall -q polybar
-#exec_always --no-startup-id polybar
-exec_always nitrogen --restore
+exec_always --no-startup-id feh --bg-max ~/Pictures/animeLauren.png
 exec_always --no-startup-id picom --config ~/.config/picom.conf
