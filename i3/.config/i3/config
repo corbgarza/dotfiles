@@ -1,6 +1,6 @@
 # My i3 config file (duckie)
 
-font MeslosLGS NF:Regular 10
+font pango:MesloLGS NF 1414141414141414141414141414
 
 set $mod Mod4
 
@@ -67,5 +67,5 @@ position top
 status_command i3blocks 
 }
 
-exec_always --no-startup-id feh --bg-max ~/Pictures/animeLauren.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/animeLauren.png
 exec_always --no-startup-id picom --config ~/.config/picom.conf
