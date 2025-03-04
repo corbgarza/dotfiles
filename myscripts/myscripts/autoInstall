@@ -3,7 +3,7 @@ sudo apt install -y bat build-essential cargo cmake curl fzf g++ gettext git i3 
 #sudo apt install -y clonezille freecad ffmpeg gimp 
 
 sudo snap install brave
-sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | /bin/bash
 
 mkdir ~/repos
 
