@@ -1,6 +1,6 @@
 # My i3 config file (duckie)
 
-font MeslosLGS NF:Regular 10
+font pango:MesloLGS NF 1414141414141414141414141414
 
 set $mod Mod4
 
@@ -9,7 +9,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 bindsym $mod+m exec i3-dmenu-desktop
-bindsym $mod+b exec brave-browser
+bindsym $mod+b exec snap run brave &
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -67,7 +67,5 @@ position top
 status_command i3blocks 
 }
 
-#exec_always killall -q polybar
-#exec_always --no-startup-id polybar
-exec_always nitrogen --restore
+exec_always --no-startup-id feh --bg-fill ~/Pictures/animeLauren.png
 exec_always --no-startup-id picom --config ~/.config/picom.conf
