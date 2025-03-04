@@ -2,7 +2,7 @@ sudo nano /etc/apt/sources.list
 sudo apt update -y && sudo apt upgrade -y
 
 #install default packages
-sudo apt install -y bat build-essential cargo cmake curl ffmpeg fzf g++ gettext git i3 i3blocks lightdm neovim network-manager ninja-build nitrogen nm-tray openssh-client openssh-server picom pkg-config polybar pulseaudio python3 snapd stow tealdeer wget x11-xserver-utils zoxide zsh
+sudo apt install -y alacritty bat build-essential cargo cmake curl feh ffmpeg fzf g++ gettext git i3 i3blocks lightdm neovim network-manager ninja-build nm-tray openssh-client openssh-server picom pkg-config polybar pulseaudio python3 snapd stow tealdeer wget x11-xserver-utils zoxide zsh
 #sudo apt install -y freecad gimp
 sudo snap install brave
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | /bin/bash
