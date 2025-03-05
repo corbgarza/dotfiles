@@ -12,7 +12,8 @@ alias search="cd /; fzf -e; cd -"
 alias la="ls -A"
 alias ll="ls -l"
 alias lla="ls -Al"
-alias i="sudo apt-get update && sudo apt-get install -y "
+alias i="sudo apt update && sudo apt upgraade -y && sudo apt-get install -y "
+alias aptremove="sudo apt autoremove && sudo apt autoclean"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
