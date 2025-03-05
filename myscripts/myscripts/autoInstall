@@ -16,7 +16,6 @@ cargo build --release --locked
 
 cd ~/
 git clone https://github.com/corbgarza/dotfiles
-git remote set-url --push origin git@github.com:corbgarza/dotfiles
 git config core.editor nvim
 git config --global user.email "garza20@protonmail.com"
 git config --global user.name "corbgarza"
