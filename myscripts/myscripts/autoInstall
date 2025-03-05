@@ -1,13 +1,10 @@
 sudo nano /etc/apt/sources.list
 sudo apt update -y && sudo apt upgrade -y
-
-#install default packages
 sudo apt install -y alacritty bat build-essential cargo cmake curl feh ffmpeg fzf g++ gettext git i3 i3blocks lightdm neovim network-manager ninja-build nm-tray openssh-client openssh-server picom pkg-config polybar pulseaudio python3 snapd stow tealdeer wget x11-xserver-utils zoxide zsh
-#sudo apt install -y freecad gimp
 sudo snap install brave
-sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | /bin/bash
+sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 
-mkdir ~/repos ~/Pictures
+mkdir -p ~/repos ~/Pictures
 cd ~/repos
 git clone  https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim/
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git
@@ -17,15 +14,16 @@ git clone https://github.com/sxyazi/yazi.git
 cd yazi
 cargo build --release --locked
 
-chsh -s $(which zsh)
-
 cd ~/
 git clone https://github.com/corbgarza/dotfiles
-scp corbing@192.168.1.9:~/.ssh/id_github ~/.ssh/
-ssh-agent
-ssh-add ~/.ssh/id_github
 git remote set-url --push origin git@github.com:corbgarza/dotfiles
 git config core.editor nvim
+git config --global user.email "garza20@protonmail.com"
+git config --global user.name "corbgarza"
 
 sudo cp ~/dotfiles/fonts/* /usr/local/share/fonts/
 cp ~/dotfiles/animeLauren.png ~/Pictures/
+
+chsh -s $(which zsh)
+cd ~/dotfiles
+stow alacritty i3 myscripts nvim p10k picom zsh

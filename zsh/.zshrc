@@ -9,11 +9,10 @@ alias polybarconfig="nvim ~/.config/polybar/config.ini"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias alacrittyconfig='nvim ~/.config/alacritty.toml'
 alias search="cd /; fzf -e; cd -"
-alias la="ls -a"
+alias la="ls -A"
 alias ll="ls -l"
-alias lla="ls -al"
+alias lla="ls -Al"
 alias i="sudo apt-get update && sudo apt-get install -y "
-alias sd="sudo shutdown now"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -27,7 +26,7 @@ bindkey '^n' history-search-forward
 bindkey '^p' history-search-backward
 
 HIST_STAMPS="mm/dd/yyyy"
-HISTSIZE=5000
+HISTSIZE=50000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
