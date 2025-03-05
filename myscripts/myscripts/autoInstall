@@ -1,7 +1,6 @@
-sudo nano /etc/apt/sources.list
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y alacritty bat build-essential cargo cmake curl feh firmware-misc-nonfree ffmpeg fzf g++ gettext git i3 i3blocks lightdm neovim network-manager ninja-build nm-tray nvidia-driver openssh-client openssh-server picom pkg-config polybar pulseaudio python3 snapd stow tealdeer wget x11-xserver-utils zoxide zsh
-sudo snap install brave
+sudo apt install -y alacritty bat build-essential cargo cmake curl feh ffmpeg fzf g++ gettext git i3 i3blocks lightdm network-manager ninja-build nm-tray openssh-client openssh-server picom pkg-config pulseaudio python3 snapd stow tealdeer x11-xserver-utils zoxide zsh
+sudo snap install brave nvim
 
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 brew update
@@ -23,7 +22,6 @@ git config --global user.name "corbgarza"
 sudo cp ~/dotfiles/fonts/* /usr/local/share/fonts/
 cp ~/dotfiles/animeLauren.png ~/Pictures/
 
-chsh -s $(which zsh)
 cd ~/dotfiles
 stow alacritty i3 myscripts nvim p10k picom zsh
 sudo reboot
