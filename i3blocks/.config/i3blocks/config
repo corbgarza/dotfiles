@@ -36,27 +36,24 @@ markup=none
 # See the script for details.
 
 [volume]
-#label=♪
-label=VOL
+label=♪
+command=$SCRIPT_DIR/volume/volume
 interval=once
 signal=10
 #STEP=5%
-
-[ip]
-command=hostname -i | awk '{ print "IP:" $1 }'
-interval=once
-color=#91E78B
 
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
 label=MEM
+command=$SCRIPT_DIR/memory/memory
 separator=false
 interval=30
 
 [memory]
 label=SWAP
+command=$SCRIPT_DIR/memory/memory
 instance=swap
 separator=false
 interval=30
@@ -68,7 +65,8 @@ interval=30
 # (defaults to 10 for 10%).
 [disk]
 label=HOME
-#DIR=/mnt/data
+#DIR=/
+command=$SCRIPT_DIR/disk_usage/disk_usage
 interval=30
 
 # Network interface monitoring
@@ -97,6 +95,7 @@ interval=5
 # see the script for details.
 [cpu_usage]
 label=CPU
+command=$SCRIPT_DIR/cpu_usage/cpu_usage
 interval=10
 min_width=CPU 100.00%
 separator=false
@@ -109,8 +108,8 @@ separator=false
 #
 # The battery instance defaults to 0.
 [battery]
-label=BAT
 label=⚡
+command=$SCRIPT_DIR/battery/battery
 interval=30
 
 # Date Time
@@ -124,17 +123,19 @@ interval=1
 # This displays "ARTIST - SONG" if a music is playing.
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 # Set to %any to automatically pick (Requires playerctl >=2.1.1)
-#[mediaplayer]
+[mediaplayer]
 # This picks any player, with vlc as first, and spotify as last choice
-#instance=vlc,%any,spotify
-#interval=5
-#signal=10
+instance=vlc,%any,spotify
+command=$SCRIPT_DIR/mediaplayer/mediaplayer
+interval=5
+signal=10
 
 # OpenVPN support
 #
 # Support multiple VPN, with colors.
-#[openvpn]
-#interval=20
+[openvpn]
+command=$SCRIPT_DIR/openvpn/openvpn
+interval=20
 
 # Temperature
 #
@@ -143,6 +144,7 @@ interval=1
 # see the script for details.
 [temperature]
 label=TEMP
+command=$SCRIPT_DIR/temperature/temperature
 interval=10
 
 # Key indicators
