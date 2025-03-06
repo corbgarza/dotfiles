@@ -1,5 +1,5 @@
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y alacritty bat build-essential cargo cmake curl feh firmware-misc-nonfree ffmpeg fzf g++ gettext git i3 i3blocks lightdm network-manager ninja-build nm-tray nvidia-driver openssh-client openssh-server picom pkg-config pulseaudio python3 snapd stow tealdeer x11-xserver-utils zoxide zsh
+sudo apt install -y alacritty bat build-essential cargo cmake curl feh firmware-misc-nonfree ffmpeg fonts-noto-color-emoji fzf g++ gettext git i3 i3blocks lightdm network-manager ninja-build nm-tray nvidia-driver openssh-client openssh-server picom pkg-config pulseaudio python3 snapd stow tealdeer x11-xserver-utils zoxide zsh
 
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 brew update
