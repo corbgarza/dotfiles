@@ -3,7 +3,7 @@ sudo apt install -y alacritty bat build-essential cargo cmake curl feh firmware-
 
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 brew update
-brew install brave-browser nvim yazi
+brew install brave-browser nvim opencv yazi
 
 mkdir -p ~/repos ~/Pictures
 cd ~/repos
@@ -26,3 +26,4 @@ sudo reboot
 stow alacritty i3 picom p10k myscripts zsh
 chsh -s $(which zsh)
 loginctl terminate-user $USER
+brew install jstkdng/programs/ueberzugpp
