@@ -8,11 +8,11 @@ alias i3blocksconfig="nvim ~/.config/i3blocks/config"
 alias picomconfig="nvim ~/.config/picom.conf"
 alias polybarconfig="nvim ~/.config/polybar/config.ini"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
-alias alacrittyconfig='nvim ~/alacritty.toml'
+alias alacrittyconfig='nvim ~/.config/alacritty.toml'
 alias search="cd /; fzf -e; cd -"
 alias la="ls -A --color=always"
 alias ll="ls -l --color=always"
-alias lla="ls -al--color=always"
+alias lla="ls -al --color=always"
 alias ls="ls --color=always"
 alias i="sudo apt-get install -y "
 alias aptupgrade="sudo apt update -y ; sudo apt upgrade -y"
