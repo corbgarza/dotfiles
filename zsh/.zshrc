@@ -15,8 +15,7 @@ alias ll="ls -l --color=always"
 alias lla="ls -al --color=always"
 alias ls="ls --color=always"
 alias i="sudo apt-get install -y "
-alias aptupgrade="sudo apt update -y ; sudo apt upgrade -y"
-alias aptremove="sudo apt autoremove -y ; sudo apt autoclean -y"
+alias aptupgrade="sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update"
 alias screenoff="xset dpms force off &"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -42,7 +41,7 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 
-PATH=$PATH:$HOME/.local/bin:$HOME/myscripts:$HOME/.cargo/bin
+PATH+=$HOME/myscripts
 
 source ~/repos/powerlevel10k/powerlevel10k.zsh-theme
 source ~/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
