@@ -63,7 +63,7 @@ gaps outer 5
 
 bar {
 position top
-status_command SCRIPT_DIR=~/dotfiles/i3blocks/.config/i3blocks/scripts i3blocks 
+status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks 
 }
 
 exec_always --no-startup-id feh --bg-fill ~/Pictures/animeLauren.png
