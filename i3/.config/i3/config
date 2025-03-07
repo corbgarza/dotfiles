@@ -1,5 +1,5 @@
 # My i3 config file (duckie)
-font pango:MesloLGS NF 14
+font pango:MesloLGS NF 10
 
 set $mod Mod4
 
