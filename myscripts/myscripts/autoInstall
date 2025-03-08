@@ -3,7 +3,7 @@ sudo apt install -y alacritty bat build-essential cargo cmake curl feh ffmpeg fo
 
 curl -fsS https://dl.brave.com/install.sh | sh
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-brew install brave-browser nvim opencv yazi
+brew install nvim opencv yazi
 
 git config core.editor nvim
 git config --global user.email "garza20@protonmail.com"
@@ -24,4 +24,3 @@ cd ~/dotfiles
 stow alacritty i3 i3blocks picom p10k myscripts zsh
 chsh -s $(which zsh)
 #brew install jstkdng/programs/ueberzugpp
-sudo reboot
