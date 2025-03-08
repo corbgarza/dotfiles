@@ -1,6 +1,7 @@
 command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
+color=#000000
 
 [volume]
 label=♪
@@ -14,21 +15,14 @@ label=MEM
 command=$SCRIPT_DIR/memory/memory
 interval=30
 
-[disk]
-command=$SCRIPT_DIR/disk_usage/disk_usage
-label=HOME
-#DIR=/
-interval=30
-
 [iface]
 #IFACE=wlan0
 command=$SCRIPT_DIR/iface/iface
-color=#00FF00
 interval=10
 
 [wifi]
 #INTERFACE=wlp3s0
-command=$SCRIPT_DIR/wifi/wifi
+#command=$SCRIPT_DIR/wifi/wifi
 label=wifi:
 interval=10
 
@@ -69,18 +63,3 @@ interval=20
 label=TEMP
 #command=$SCRIPT_DIR/temperature/temperature
 interval=10
-
-# Add the following bindings to i3 config file:
-# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#KEY=CAPS
-#markup=pango
-#interval=once
-#signal=11
-
-#[keyindicator]
-#KEY=NUM
-#markup=pango
-#interval=once
-#signal=11

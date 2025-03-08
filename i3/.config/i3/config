@@ -1,5 +1,5 @@
 # My i3 config file (duckie)
-font pango:MesloLGS NF 8
+font pango:MesloLGS NF 10
 
 set $mod Mod4
 
@@ -60,10 +60,14 @@ client.background       #ffffff
 
 gaps inner 5
 gaps outer 5
+default_border none
 
 bar {
-position top
-status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks 
+        colors {
+                background #FCD7DD
+                }
+        position top
+        status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks 
 }
 
 exec_always --no-startup-id feh --bg-fill ~/Pictures/animeLauren.png

@@ -8,7 +8,7 @@ alias i3blocksconfig="nvim ~/.config/i3blocks/config"
 alias picomconfig="nvim ~/.config/picom.conf"
 alias polybarconfig="nvim ~/.config/polybar/config.ini"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
-alias alacrittyconfig='nvim ~/.config/alacritty.toml'
+alias alacrittyconfig='nvim ~/.config/alacritty/alacritty.toml'
 alias search="cd /; fzf -e; cd -"
 alias la="ls -A --color=always"
 alias ll="ls -l --color=always"
@@ -16,7 +16,7 @@ alias lla="ls -al --color=always"
 alias ls="ls --color=always"
 alias i="sudo apt-get install -y "
 alias aptupgrade="sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update"
-alias screenoff="xset dpms force off &"
+alias screenoff="sleep 1; xset dpms force off &"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
