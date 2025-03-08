@@ -1,6 +1,7 @@
 command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
+color=#000000
 
 [volume]
 label=♪
