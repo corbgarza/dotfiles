@@ -1,9 +1,12 @@
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y alacritty bat build-essential cargo cmake curl feh firmware-misc-nonfree ffmpeg fonts-noto-color-emoji fzf g++ gettext git i3 i3blocks lightdm network-manager ninja-build nm-tray nvidia-driver openssh-client openssh-server picom pkg-config pulseaudio python3 snapd stow tealdeer x11-xserver-utils zoxide zsh
+sudo apt install -y alacritty bat build-essential cargo cmake curl feh ffmpeg fonts-noto-color-emoji fzf g++ gettext git i3 i3blocks lightdm network-manager ninja-build nm-tray openssh-client openssh-server picom pkg-config pulseaudio python3 stow tealdeer x11-xserver-utils zoxide zsh
 
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-brew update
 brew install brave-browser nvim opencv yazi
+
+git config core.editor nvim
+git config --global user.email "garza20@protonmail.com"
+git config --global user.name "corbgarza"
 
 mkdir -p ~/repos ~/Pictures
 cd ~/repos
@@ -14,16 +17,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 
 cd ~/
 git clone https://github.com/corbgarza/dotfiles
-git config core.editor nvim
-git config --global user.email "garza20@protonmail.com"
-git config --global user.name "corbgarza"
-
 sudo cp ~/dotfiles/fonts/* /usr/local/share/fonts/
 cp ~/dotfiles/animeLauren.png ~/Pictures/
-
-sudo reboot
-
-stow alacritty i3 picom p10k myscripts zsh
+cd ~/dotfiles
+stow alacritty i3 i3blocks picom p10k myscripts zsh
 chsh -s $(which zsh)
-loginctl terminate-user $USER
-brew install jstkdng/programs/ueberzugpp
+#brew install jstkdng/programs/ueberzugpp
+sudo reboot
