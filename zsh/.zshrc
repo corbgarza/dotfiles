@@ -4,9 +4,9 @@ alias picomconfig="nvim ~/.config/picom.conf"
 alias polybarconfig="nvim ~/.config/polybar/config.ini"
 alias alacrittyconfig='nvim ~/.config/alacritty.toml'
 alias search="cd /; fzf -e; cd -"
-alias la="ls -a"
+alias la="ls -A"
 alias ll="ls -l"
-alias lla="ls -al"
+alias lla="ls -Al"
 alias i="sudo apt-get update && sudo apt-get install -y "
 alias sd="sudo shutdown now"
 
