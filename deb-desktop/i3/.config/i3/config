@@ -5,7 +5,7 @@ set $mod Mod4
 
 floating_modifier $mod
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 bindsym $mod+m exec i3-dmenu-desktop
 bindsym $mod+b exec brave-browser &
@@ -62,6 +62,7 @@ gaps inner 5
 gaps outer 5
 default_border none
 
+exec_always killall -q polybar
 exec_always --no-startup-id polybar
 exec_always --no-startup-id feh --bg-fill ~/Pictures/animeLauren.png
 exec_always --no-startup-id picom --config ~/.config/picom.conf
