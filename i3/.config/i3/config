@@ -71,4 +71,4 @@ bar {
 }
 
 exec_always --no-startup-id feh --bg-fill ~/Pictures/animeLauren.png
-exec_always --no-startup-id picom --config ~/.config/picom.conf
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
