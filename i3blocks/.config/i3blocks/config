@@ -20,25 +20,11 @@ interval=30
 command=$SCRIPT_DIR/iface/iface
 interval=10
 
-[wifi]
-#INTERFACE=wlp3s0
-#command=$SCRIPT_DIR/wifi/wifi
-label=wifi:
-interval=10
-
-[bandwidth]
-#INTERFACE=eth0
-interval=5
-
 [cpu_usage]
 label=CPU
 command=$SCRIPT_DIR/cpu_usage/cpu_usage
 interval=10
 min_width=CPU 100.00%
-
-[load_average]
-#label=LOAD
-#interval=10
 
 [battery]
 label=⚡
@@ -58,8 +44,3 @@ signal=10
 [openvpn]
 command=$SCRIPT_DIR/openvpn/openvpn
 interval=20
-
-[temperature]
-label=TEMP
-#command=$SCRIPT_DIR/temperature/temperature
-interval=10
