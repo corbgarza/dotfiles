@@ -3,6 +3,7 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
+	editor = nvim
 [remote "origin"]
 	url = https://github.com/corbgarza/dotfiles
 	fetch = +refs/heads/*:refs/remotes/origin/*
