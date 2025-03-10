@@ -4,7 +4,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 alias zshconfig="nvim ~/.zshrc"
 alias i3config="nvim ~/.config/i3/config"
-alias i3blocksconfig="nvim ~/.config/i3blocks/config"
 alias picomconfig="nvim ~/.config/picom.conf"
 alias polybarconfig="nvim ~/.config/polybar/config.ini"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"

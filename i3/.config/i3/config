@@ -62,13 +62,6 @@ gaps inner 5
 gaps outer 5
 default_border none
 
-bar {
-        colors {
-                background #FCD7DD
-                }
-        position top
-        status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks 
-}
-
+exec_always --no-startup-id polybar
 exec_always --no-startup-id feh --bg-fill ~/Pictures/animeLauren.png
 exec_always --no-startup-id picom --config ~/.config/picom.conf
