@@ -1,5 +1,5 @@
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y bat curl feh ffmpeg fonts-noto-color-emoji fzf git i3 i3blocks lightdm network-manager nm-tray openssh-client openssh-server picom pulseaudio python3 stow tealdeer x11-xserver-utils zoxide zsh
+sudo apt install -y bat curl feh ffmpeg fonts-noto-color-emoji fzf git i3 lightdm network-manager nm-tray openssh-client openssh-server picom polybar pulseaudio python3 stow tealdeer x11-xserver-utils zoxide zsh
 ####build tools####
 #sudo apt install - y build-essential cargo cmake g++ gettext ninja-build pkg-config
 curl -fsS https://dl.brave.com/install.sh | sh
