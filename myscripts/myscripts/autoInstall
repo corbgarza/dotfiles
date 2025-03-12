@@ -1,10 +1,10 @@
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y bat brightnessctl curl feh fonts-noto-color-emoji fzf git i3 lightdm network-manager nm-tray openssh-client openssh-server picom polybar psmisc pulseaudio python3 stow tealdeer x11-xserver-utils zoxide zsh
-####build tools####
-#sudo apt install - y build-essential cargo cmake ffmpeg g++ gettext gpicker ninja-build pkg-config
+sudo apt install -y brightnessctl fonts-noto-color-emoji i3 lightdm network-manager nm-tray openssh-client openssh-server picom polybar psmisc x11-xserver-utils 
 curl -fsS https://dl.brave.com/install.sh | sh
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-brew install alacritty nvim yazi
+brew install alacritty bat curl feh fzf git nvim pulseaudio python3 stow tealdeer yazi zoxide zsh
+#brew install cmake ffmpeg gettext rust
+#sudo apt install - y build-essential g++ gpicker ninja-build pkg-config
 
 mkdir -p ~/repos; cd ~/repos
 git clone  https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim/
@@ -21,4 +21,3 @@ sudo cp ~/dotfiles/fonts/* /usr/local/share/fonts/
 cd ~/dotfiles
 stow alacritty i3 i3blocks picom p10k myscripts zsh
 chsh -s $(which zsh)
-#brew install jstkdng/programs/ueberzugpp #yazi image viewer 
