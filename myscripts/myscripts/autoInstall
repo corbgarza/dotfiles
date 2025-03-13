@@ -2,7 +2,7 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y brightnessctl fonts-noto-color-emoji i3 lightdm network-manager nm-tray openssh-client openssh-server picom polybar psmisc x11-xserver-utils 
 curl -fsS https://dl.brave.com/install.sh | sh
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-brew install alacritty bat curl feh fzf git nvim pulseaudio python3 stow tealdeer yazi zoxide zsh
+brew install bat curl feh fzf git kitty nvim pulseaudio python3 stow tealdeer yazi zoxide zsh
 #brew install cmake ffmpeg gettext rust
 #sudo apt install - y build-essential g++ gpicker ninja-build pkg-config
 
