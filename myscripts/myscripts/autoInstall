@@ -3,8 +3,8 @@ sudo apt install -y curl nala
 sudo nala install -y brightnessctl fonts-noto-color-emoji i3 lightdm network-manager nm-tray openssh-client openssh-server picom polybar psmisc x11-xserver-utils 
 #sudo apt install - y build-essential cmake g++ gettext gpicker ninja-build pkg-config rust
 
-brew install bat feh ffmpeg fontconfig fzf git openvpn pulseaudio python3 stow tealdeer yazi zoxide
-
 curl -fsS https://dl.brave.com/install.sh | sh
 
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+
+brew install bat feh ffmpeg fontconfig fzf git openvpn pulseaudio python3 stow tealdeer yazi zoxide
