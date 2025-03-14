@@ -6,29 +6,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update
 
-#### check for and install required repos ####
-if [[ ! -e ~/repos/powerlevel10k ]]; then git clone --depth=1 https://github.com/romkatv/powerlevel10k.git; echo "installing powerlevel10k"; fi
-if [[ ! -e ~/repos/zsh-syntax-highlighting ]]; then git clone https://github.com/zsh-users/zsh-syntax-highlighting.git; echo "installing syntax-highlighting"; fi 
-if [[ ! -e ~/repos/zsh-autosuggestions ]]; then git clone https://github.com/zsh-users/zsh-autosuggestions; echo "installing autosuggestions"; fi
-if [[ ! -e ~/dotfiles ]]; then git clone https://github.com/corbgarza/dotfiles; echo "installing dotfiles"; fi 
-
-alias aptupgrade="sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update"
 alias bat="batcat"
-alias brews="brew search"
 alias i="sudo apt-get install -y "
-alias i3config="nvim ~/.config/i3/config"
-alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 alias la="ls -A --color=always"
 alias ll="ls -l --color=always"
 alias lla="ls -al --color=always"
 alias ls="ls --color=always"
-alias nvimconfig="nvim ~/.config/nvim/init.lua"
-alias picomconfig="nvim ~/.config/picom/picom.conf"
-alias polybarconfig="nvim ~/.config/polybar/config.ini"
 alias search="cd /; fzf -e; cd -"
 alias screenoff="xset dpms force standby &"
-alias zshconfig="nvim ~/.zshrc"
 
 autoload -U compinit && compinit
 bindkey -e autosuggest-accept
@@ -47,7 +34,11 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 
-PATH+=$HOME/myscripts
+#### check for and install required repos ####
+if [[ ! -e ~/repos/powerlevel10k ]]; then git clone --depth=1 https://github.com/romkatv/powerlevel10k.git; echo "installing powerlevel10k"; fi
+if [[ ! -e ~/repos/zsh-syntax-highlighting ]]; then git clone https://github.com/zsh-users/zsh-syntax-highlighting.git; echo "installing syntax-highlighting"; fi 
+if [[ ! -e ~/repos/zsh-autosuggestions ]]; then git clone https://github.com/zsh-users/zsh-autosuggestions; echo "installing autosuggestions"; fi
+if [[ ! -e ~/dotfiles ]]; then git clone https://github.com/corbgarza/dotfiles; echo "installing dotfiles"; fi 
 
 source ~/repos/powerlevel10k/powerlevel10k.zsh-theme
 source ~/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
