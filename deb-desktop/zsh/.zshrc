@@ -6,16 +6,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update
-
 alias bat="batcat"
 alias i="sudo apt-get install -y "
 alias la="ls -A --color=always"
 alias ll="ls -l --color=always"
 alias lla="ls -al --color=always"
 alias ls="ls --color=always"
+alias gacp="git add -A; git commit -a -m "update"; git push"
 alias search="cd /; fzf -e; cd -"
 alias screenoff="xset dpms force standby &"
+alias upgrade-remove="sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update"
 
 autoload -U compinit && compinit
 bindkey -e autosuggest-accept
