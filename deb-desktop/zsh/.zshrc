@@ -6,14 +6,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+alias bat="batcat"
+alias gacp="git add -A; git commit -a -m "update"; git push"
 alias i="sudo apt-get install -y "
 alias la="ls -A --color=always"
 alias lla="ls -al --color=always"
 alias ll="ls -l --color=always"
 alias ls="ls --color=always"
-alias gacp="git add -A; git commit -a -m "update"; git push"
-alias search="cd /; fzf -e; cd -"
 alias screenoff="xset dpms force off &"
+alias search="cd /; fzf -e; cd -"
 alias upgrade-remove="sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update"
 
 autoload -U compinit && compinit
@@ -22,7 +23,7 @@ bindkey '^n' history-search-forward
 bindkey '^p' history-search-backward
 
 HIST_STAMPS="mm/dd/yyyy"
-HISTSIZE=50000
+HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
