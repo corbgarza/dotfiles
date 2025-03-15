@@ -1,15 +1,10 @@
 [core]
 	editor = nvim
-[remote "origin"]
-	url = https://github.com/corbgarza/dotfiles
-	pushurl = git@github.com:corbgarza/dotfiles.git
-[branch "master"]
-	remote = origin
 [user]
 	name = corbgarza
 	email = garza20@protonmail.com
 [alias]
 	aa = add -A
 	com = commit -a -m "update"
-	pl = pull --rebase
+	pl = pull 
 	st = status
