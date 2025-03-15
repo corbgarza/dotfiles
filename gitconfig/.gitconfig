@@ -3,8 +3,3 @@
 [user]
 	name = corbgarza
 	email = garza20@protonmail.com
-[alias]
-	aa = add -A
-	com = commit -a -m "update"
-	pl = pull 
-	st = status
