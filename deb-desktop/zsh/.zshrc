@@ -9,7 +9,7 @@ fi
 alias gacp="git add -A; git commit -a -m "update"; git push"
 alias i="sudo apt-get install -y "
 alias la="ls -A --color=always"
-alias lla="ls -al --color=always"
+alias lla="ls -Al --color=always"
 alias ll="ls -l --color=always"
 alias ls="ls --color=always"
 alias screenoff="xset dpms force off &"

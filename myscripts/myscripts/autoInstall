@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt update -y ; sudo apt upgrade -y ; sudo apt autoremove -y
 sudo apt install -y brightnessctl build-essential cmake curl fonts-noto-color-emoji g++ gettext gpick i3 kitty lightdm network-manager ninja-build nm-tray openssh-client openssh-server pcmanfm picom pkg-config polybar psmisc vlc x11-xserver-utils 
 if ! command -v brew > /dev/null; then sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash; fi
