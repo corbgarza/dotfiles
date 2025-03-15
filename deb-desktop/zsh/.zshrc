@@ -13,7 +13,7 @@ alias ll="ls -l --color=always"
 alias ls="ls --color=always"
 alias gacp="git add -A; git commit -a -m "update"; git push"
 alias search="cd /; fzf -e; cd -"
-alias screenoff="xset dpms force standby &"
+alias screenoff="xset dpms force off &"
 alias upgrade-remove="sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update"
 
 autoload -U compinit && compinit
