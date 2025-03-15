@@ -8,8 +8,8 @@ fi
 
 alias i="sudo apt-get install -y "
 alias la="ls -A --color=always"
-alias ll="ls -l --color=always"
 alias lla="ls -al --color=always"
+alias ll="ls -l --color=always"
 alias ls="ls --color=always"
 alias gacp="git add -A; git commit -a -m "update"; git push"
 alias search="cd /; fzf -e; cd -"
