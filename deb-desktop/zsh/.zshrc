@@ -6,7 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-alias bat="batcat"
 alias gacp="git add -A; git commit -a -m "update"; git push"
 alias i="sudo apt-get install -y "
 alias la="ls -A --color=always"
