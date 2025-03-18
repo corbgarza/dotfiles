@@ -33,7 +33,7 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 
-#### check for and install required repos ####
+#### check for and install required software ####
 if [[ ! -e ~/repos/powerlevel10k ]]; then git clone --depth=1 https://github.com/romkatv/powerlevel10k.git; echo "installing powerlevel10k"; fi
 if [[ ! -e ~/repos/zsh-syntax-highlighting ]]; then git clone https://github.com/zsh-users/zsh-syntax-highlighting.git; echo "installing syntax-highlighting"; fi 
 if [[ ! -e ~/repos/zsh-autosuggestions ]]; then git clone https://github.com/zsh-users/zsh-autosuggestions; echo "installing autosuggestions"; fi

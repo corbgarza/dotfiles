@@ -1,8 +1,5 @@
 #!/bin/bash
-cd $HOME/repos/dotfiles/deb-desktop
-stow -t $HOME i3 kitty picom polybar zsh
-cd ..
-stow -t $HOME gitconfig myscripts p10k
-
+cd $HOME/dotfiles
 sudo echo $(which zsh) >> /etc/shells
 chsh -s $(which zsh)
+git clone https://github.com/corbgarza/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
