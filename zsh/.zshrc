@@ -14,7 +14,7 @@ alias ll="ls -l --color=always"
 alias ls="ls --color=always"
 alias screenoff="xset dpms force off &"
 alias search="cd /; fzf -e; cd -"
-alias upgrade-remove="sudo apt update -y ; sudo apt upgrade -y; sudo apt autoremove -y ; sudo apt autoclean -y; tldr --update"
+alias upgrade-remove="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && tldr --update"
 alias yt="yt-dlp --write-thumbnail --embed-chapters --sponsorblock-remove sponsor,intro,outro"
 
 autoload -U compinit && compinit
