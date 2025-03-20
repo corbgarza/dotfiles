@@ -35,10 +35,10 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 
 #### check for and install required software ####
-if [[ ! -e ~/repos/powerlevel10k ]]; then git clone --depth=1 https://github.com/romkatv/powerlevel10k.git; echo "installing powerlevel10k"; fi
-if [[ ! -e ~/repos/zsh-syntax-highlighting ]]; then git clone https://github.com/zsh-users/zsh-syntax-highlighting.git; echo "installing syntax-highlighting"; fi 
-if [[ ! -e ~/repos/zsh-autosuggestions ]]; then git clone https://github.com/zsh-users/zsh-autosuggestions; echo "installing autosuggestions"; fi
-if [[ ! -e ~/dotfiles ]]; then git clone https://github.com/corbgarza/dotfiles; echo "installing dotfiles"; fi 
+if [[ ! -e ~/repos/powerlevel10k ]]; then git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/repos/powerlevel10k; echo "installing powerlevel10k"; fi
+if [[ ! -e ~/repos/zsh-syntax-highlighting ]]; then git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/repos/zsh-syntax-highlighting; echo "installing syntax-highlighting"; fi 
+if [[ ! -e ~/repos/zsh-autosuggestions ]]; then git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/repos/zsh-autosuggestions; echo "installing autosuggestions"; fi
+if [[ ! -e ~/dotfiles ]]; then git clone https://github.com/corbgarza/dotfiles $HOME/dotfiles; echo "installing dotfiles"; fi 
 
 source ~/repos/powerlevel10k/powerlevel10k.zsh-theme
 source ~/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
