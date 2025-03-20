@@ -1,8 +1,0 @@
-#!/bin/bash
-cd $HOME/repos/dotfiles/deb-desktop
-stow -t $HOME i3 kitty picom polybar zsh
-cd ..
-stow -t $HOME gitconfig myscripts p10k
-
-sudo echo $(which zsh) >> /etc/shells
-chsh -s $(which zsh)
