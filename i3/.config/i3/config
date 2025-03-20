@@ -7,7 +7,7 @@ floating_modifier $mod
 
 bindsym $mod+Return exec kitty
 bindsym $mod+q kill
-bindsym $mod+m exec i3-dmenu-desktop
+bindsym $mod+m exec rofi -show drun
 bindsym $mod+b exec brave-browser &
 bindsym $mod+h focus left
 bindsym $mod+j focus down
