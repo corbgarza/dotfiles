@@ -17,6 +17,8 @@ alias ls="ls --color=always"
 alias screenoff="xset dpms force off &"
 alias search="cd /; fzf -e; cd -"
 alias upgrade-remove="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && tldr --update"
+alias vpnup="sudo openvpn --config ~/.ssh/openvpn_vpnuser.ovpn --auth-user-pass ~/.ssh/.authinfo"
+alias vpndown="sudo killall openvpn"
 alias ytt="yt-dlp --paths '~/storage/movies/YouTube/' -o '%(title)s.%(ext)s' --write-thumbnail --embed-chapters --sponsorblock-remove sponsor"
 alias ytd="yt-dlp --paths $HOME/Videos -o '%(title)s.%(ext)s' --write-thumbnail --embed-chapters --sponsorblock-remove sponsor"
 
