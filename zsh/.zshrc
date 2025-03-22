@@ -7,8 +7,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 alias gacp="git add -A; git commit -a -m "update"; git push"
-alias gitpulls="cd ~/projects && git pull; cd ~/dotfiles && git pull; cd ~"
-alias gitpushes="cd ~/projects && gacp && echo 'projects pushed'; cd ~/dotfiles && gacp && echo '#### dotfiles pushed ####' ; cd ~"
+alias gitpulls="cd ~/projects && git pull && echo '\n#### projects pulled ####'; cd ~/dotfiles && git pull echo '#### dotfiles pulled ####'; cd ~"
+alias gitpushes="cd ~/projects && gacp && echo '\n#### projects pushed ####\n'; cd ~/dotfiles && gacp && echo '\n#### dotfiles pushed ####\n' ; cd ~"
 alias i="sudo apt-get install -y "
 alias la="ls -A --color=always"
 alias lla="ls -Al --color=always"
