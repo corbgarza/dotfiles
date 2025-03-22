@@ -1,12 +1,12 @@
 configuration {
 modes: "drun,ssh,run";
-/*	font: "mono 12";*/
+	font: "MesloLGS NF 14";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-/*	show-icons: false;*/
-/*	terminal: "rofi-sensible-terminal";*/
+	show-icons: true;
+	terminal: "kitty";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
@@ -24,7 +24,7 @@ modes: "drun,ssh,run";
 /*	ignored-prefixes: "";*/
 /*	sort: false;*/
 /*	sorting-method: "normal";*/
-/*	case-sensitive: false;*/
+	case-sensitive: false;
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
 /*	hover-select: false;*/
