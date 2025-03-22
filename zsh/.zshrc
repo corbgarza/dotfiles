@@ -8,7 +8,7 @@ fi
 
 alias gacp="git add -A; git commit -a -m "update"; git push"
 alias gitpulls="cd ~/projects && git pull; cd ~/dotfiles && git pull; cd ~"
-alias gitpushes="cd ~/projects && gacp; cd ~/dotfiles && gacp; cd ~"
+alias gitpushes="cd ~/projects && gacp && echo 'projects pushed'; cd ~/dotfiles && gacp && echo '#### dotfiles pushed ####' ; cd ~"
 alias i="sudo apt-get install -y "
 alias la="ls -A --color=always"
 alias lla="ls -Al --color=always"
