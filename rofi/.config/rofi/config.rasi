@@ -1,6 +1,6 @@
 configuration {
-modes: "drun,ssh,run";
-	font: "MesloLGS NF 14";
+	modi: "drun,window,ssh";
+	font: "MesloLGS NF 20";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
