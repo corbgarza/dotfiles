@@ -82,7 +82,7 @@ default_border none
 
 exec_always killall -q polybar
 exec_always --no-startup-id polybar
-exec_always --no-startup-id feh --bg-fill ~/Pictures/animeLauren.png
+exec_always --no-startup-id feh --randomize --bg-scale ~/Pictures/
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id nm-applet
 
