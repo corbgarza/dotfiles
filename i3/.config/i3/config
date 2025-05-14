@@ -89,8 +89,9 @@ gaps inner 5
 gaps outer 5
 default_border none
 
+exec --no-startup-id wal -R
 exec_always --no-startup-id killall -q polybar; polybar 
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 exec_always --no-startup-id nm-applet
-exec_always ~/.local/bin/wal -i ~/Pictures/
+exec_always ~/.local/bin/wal -i ~/Wallpapers/
 
