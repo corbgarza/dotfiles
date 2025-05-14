@@ -1,16 +1,9 @@
 @import "~/.cache/wal/colors-rofi-dark"
 configuration {
-	modi: "drun,window,ssh,run";
-	font: "MesloLGS NF 20";
+	modi: "drun,window";
+	font: "MesloLGS NF 10";
 	show-icons: true;
 	terminal: "kitty";
 	case-sensitive: false;
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
 }
+

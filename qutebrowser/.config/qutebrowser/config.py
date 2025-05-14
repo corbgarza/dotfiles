@@ -11,6 +11,7 @@ config.set('content.javascript.enabled', True, 'chrome-devtools://*')
 config.set('content.javascript.enabled', True, 'devtools://*')
 config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
+c.content.blocking.method = 'both'
 c.url.default_page = 'https://search.brave.com/'
 c.url.incdec_segments = ['path', 'query']
 c.url.searchengines = {'DEFAULT': 'https://search.brave.com/search?q={}&source=web','yt': 'https://www.youtube.com/results?search_query={}','gt': 'https://github.com/search?q={}&type=repositories'}
