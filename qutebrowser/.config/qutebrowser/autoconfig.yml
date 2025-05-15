@@ -6,7 +6,5 @@
 
 config_version: 2
 settings:
-  bindings.commands:
-    global:
-      normal:
-        ',Y': hint links spawn mpv {hint-url}
+  content.javascript.clipboard:
+    https://search.brave.com: access-paste
