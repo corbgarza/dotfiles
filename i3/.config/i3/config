@@ -1,29 +1,12 @@
 # My i3 config file (duckie)
 font pango:MesloLGS NF 10
-
-set $mod Mod4
-
 floating_modifier $mod
 tiling_drag modifier titlebar
+gaps inner 9
+gaps outer 5
+default_border none
 
-bindsym $mod+Return exec kitty
-bindsym $mod+q kill
-bindsym $mod+m exec rofi -show drun
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-bindsym $mod+b split h
-bindsym $mod+v split v
-bindsym $mod+f fullscreen toggle
-bindsym $mod+e layout toggle split
-bindsym $mod+space floating toggle
-
+set $mod Mod4
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -34,6 +17,22 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+bindsym $mod+w exec ~/.local/bin/wal -i ~/Wallpapers/
+bindsym $mod+p exec polybar 
+bindsym $mod+q kill
+bindsym $mod+m exec rofi -show drun
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+r mode "resize"
+bindsym $mod+b split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+e layout toggle split
+bindsym $mod+space floating toggle
+bindsym $mod+Return exec kitty
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -56,7 +55,10 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
@@ -67,31 +69,17 @@ mode "resize" {
         bindsym l resize grow width 10 px or 10 ppt
         bindsym $mod+r mode "default"
 }
-bindsym $mod+r mode "resize"
-# Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use 
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources.
+
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
-
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-
 client.background       $bg
-
-gaps inner 5
-gaps outer 5
-default_border none
 
 exec --no-startup-id wal -R
 exec --no-startup-id nm-applet
-exec_always --no-startup-id killall -q polybar; polybar 
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
-exec_always ~/.local/bin/wal -i ~/Wallpapers/
-
+exec --no-startup-id picom 
