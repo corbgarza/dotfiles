@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #git add, commit, and push
 gacp () {
 	git add --all
@@ -46,10 +47,10 @@ pkgsearch () {
 
 #yt-dlp termux
 ytt () {
-	yt-dlp --paths '~/storage/movies/YouTube/' -o '%(title)s.%(ext)s' --embed-chapters --sponsorblock-remove sponsor
+	yt-dlp --paths '~/storage/movies/YouTube/' -o '%(title)s.%(ext)s' --embed-chapters --sponsorblock-remove sponsor $1
 }
 
 #yt-dlp debian
 ytd () {
-	yt-dlp --paths '~/Videos' -o '%(title)s.%(ext)s' --embed-chapters --sponsorblock-remove sponsor
+	yt-dlp --paths '~/Videos' -o '%(title)s.%(ext)s' --embed-chapters --sponsorblock-remove sponsor $1
 }

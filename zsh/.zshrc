@@ -11,7 +11,7 @@ alias la="ls --almost-all --color=always"
 alias lla="ls --almost-all --human-readable --color=always -l"
 alias ll="ls -l --human-readable --color=always"
 alias ls="ls --color=always"
-alias restartnow="sudo restart now"
+alias rebootnow="sudo reboot now"
 alias shutdownnow="sudo shutdown now"
 alias v="nvim"
 

@@ -18,10 +18,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-bindsym $mod+w exec ~/.local/bin/wal -i ~/Wallpapers/
-bindsym $mod+p exec polybar 
 bindsym $mod+q kill
-bindsym $mod+m exec rofi -show drun
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -30,9 +27,12 @@ bindsym $mod+r mode "resize"
 bindsym $mod+b split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
-bindsym $mod+e layout toggle split
 bindsym $mod+space floating toggle
 bindsym $mod+Return exec kitty
+bindsym $mod+m exec mpv ~/Music --shuffle &
+bindsym $mod+w exec ~/.local/bin/wal -i ~/Wallpapers/
+bindsym $mod+p exec polybar
+bindsym $mod+Tab exec rofi -show drun
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -59,8 +59,8 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+bindsym $mod+Shift+m exec killall mpv
 bindsym $mod+Shift+p exec killall polybar
 
 mode "resize" {

@@ -1,6 +1,6 @@
 @import "~/.cache/wal/colors-rofi-dark"
 configuration {
-	modi: "drun";
+	modi: "drun,window";
 	font: "MesloLGS NF 14";
 	show-icons: true;
 	terminal: "kitty";
