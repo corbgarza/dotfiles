@@ -14,8 +14,6 @@ alias ls="ls --color=always"
 alias restartnow="sudo restart now"
 alias shutdownnow="sudo shutdown now"
 alias v="nvim"
-alias ytt="yt-dlp --paths '~/storage/movies/YouTube/' -o '%(title)s.%(ext)s' --write-thumbnail --embed-chapters --sponsorblock-remove sponsor"
-alias ytd="yt-dlp --paths $HOME/Videos -o '%(title)s.%(ext)s' --write-thumbnail --embed-chapters --sponsorblock-remove sponsor"
 
 autoload -U compinit && compinit
 bindkey -e autosuggest-accept
