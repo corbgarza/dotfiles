@@ -44,6 +44,7 @@ source ~/repos/powerlevel10k/powerlevel10k.zsh-theme
 source ~/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/aliasscripts.sh
+
 if [[ -e /home/linuxbrew/.linuxbrew/bin/brew ]]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
