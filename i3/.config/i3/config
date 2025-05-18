@@ -18,6 +18,9 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+assign [class="vlc"] $ws10
+assign [class="mpv"] $ws9
+
 bindsym $mod+q kill
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -29,7 +32,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 bindsym $mod+space floating toggle
 bindsym $mod+Return exec kitty
-bindsym $mod+m exec mpv ~/Music --shuffle &
+bindsym $mod+m exec vlc ~/Music --random &
 bindsym $mod+w exec ~/.local/bin/wal -i ~/Wallpapers/
 bindsym $mod+p exec polybar
 bindsym $mod+Tab exec rofi -show drun
@@ -60,7 +63,7 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+m exec killall mpv
+bindsym $mod+Shift+m exec killall vlc
 bindsym $mod+Shift+p exec killall polybar
 
 mode "resize" {
