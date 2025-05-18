@@ -40,9 +40,9 @@ updater () {
 
 #search pkgs
 pkgsearch () {
-	apt search $1 && echo -e "\n#### apt results completed ####\n"
-	brew search $1 && echo -e "\n#### brew results completed ####\n"
-	flatpak search $1 && echo -e "\n#### flatpak results completed ####\n"
+	apt search $1 ; echo -e "\n#### apt results completed ####\n"
+	brew search $1 ; echo -e "\n#### brew results completed ####\n"
+	flatpak search $1 ; echo -e "\n#### flatpak results completed ####\n"
 }
 
 #yt-dlp termux
