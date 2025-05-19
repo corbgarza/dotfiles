@@ -88,3 +88,5 @@ exec --no-startup-id ~/.local/bin/wal -i ~/Wallpapers/
 exec --no-startup-id nm-applet
 exec --no-startup-id picom 
 exec --no-startup-id polybar
+exec --no-startup-id dbus-update-activation-environment --all
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets

@@ -53,3 +53,4 @@ fi
 
 # Created by `pipx` on 2025-05-10 12:46:59
 export PATH="$PATH:/home/corbgarza/.local/bin"
+export EDITOR="/home/linuxbrew/.linuxbrew/bin/nvim"

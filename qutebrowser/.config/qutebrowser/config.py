@@ -14,6 +14,6 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 c.content.blocking.method = 'both'
 c.url.default_page = 'https://search.brave.com/'
 c.url.incdec_segments = ['path', 'query']
-c.url.searchengines = {'DEFAULT': 'https://search.brave.com/search?q={}&source=web','yt': 'https://www.youtube.com/results?search_query={}','gt': 'https://github.com/search?q={}&type=repositories'}
+c.url.searchengines = {'DEFAULT': 'https://search.brave.com/search?q={}&source=web','yt': 'https://www.youtube.com/results?search_query={}','gt': 'https://github.com/search?q={}&type=repositories', 'pdb': 'https://www.protondb.com/search?q={}'}
 c.url.start_pages = 'https://search.brave.com/'
 config.bind(",Y", 'hint links spawn mpv {hint-url}')
