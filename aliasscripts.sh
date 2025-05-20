@@ -10,7 +10,7 @@ gacp () {
 gitpulls () {
 	cd ~/projects && git pull && echo '\n#### projects pulled successfully ####\n'
 	cd ~/dotfiles && git pull && echo '\n#### dotfiles pulled successfully ####\n'
-	cd ~/Wallpapers && git pull && echo '\n#### Wallpapers pulled successfully ####\n'
+	cd ~/Wallpaper && git pull && echo '\n#### Wallpapers pulled successfully ####\n'
 	cd ~
 }
 
@@ -18,7 +18,7 @@ gitpulls () {
 gitpushes () {
 	cd ~/projects && gacp && echo '\n#### projects pushed successfully ####\n' 
 	cd ~/dotfiles && gacp && echo '\n#### dotfiles pushed successfully ####\n'
-	cd ~/Wallpapers && gacp && echo '\n#### Wallpapers pushed successfully ####\n'
+	cd ~/Wallpaper && gacp && echo '\n#### Wallpapers pushed successfully ####\n'
 	cd ~
 }
 

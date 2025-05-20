@@ -33,8 +33,8 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+space floating toggle
 bindsym $mod+Return exec kitty
 bindsym $mod+m exec vlc ~/Music --random &
-bindsym $mod+w exec ~/.local/bin/wal -i ~/Wallpapers/
-bindsym $mod+p exec polybar
+bindsym $mod+w exec ~/.local/bin/wal -i ~/Wallpaper
+bindsym $mod+p exec polybar --config=~/.config/polybar/config.ini
 bindsym $mod+Tab exec rofi -show drun
 
 bindsym $mod+1 workspace $ws1
