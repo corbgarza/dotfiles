@@ -8,6 +8,7 @@ fi
 
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias destroy="sudo apt purge -y "
+alias ff="fastfetch"
 alias i="sudo apt install -y "
 alias la="ls --almost-all --color=always"
 alias lla="ls --almost-all --human-readable --color=always -l"
