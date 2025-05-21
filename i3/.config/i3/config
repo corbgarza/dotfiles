@@ -1,5 +1,3 @@
-# My i3 config file (duckie)
-font pango:MesloLGS NF 10
 floating_modifier $mod
 tiling_drag modifier titlebar
 gaps inner 9
@@ -34,9 +32,9 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+space floating toggle
 bindsym $mod+Return exec kitty
 bindsym $mod+m exec vlc ~/Music --random &
-bindsym $mod+w exec ~/.local/bin/wal -i ~/Wallpapers/
-bindsym $mod+p exec polybar
-bindsym $mod+Tab exec rofi -show drun
+bindsym $mod+w exec ~/.local/bin/wal -i ~/Wallpaper
+bindsym $mod+p exec polybar --config=~/.config/polybar/config.ini
+bindsym $mod+Tab exec /home/linuxbrew/.linuxbrew/bin/rofi -show drun
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
