@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias destroy="sudo apt purge -y "
 alias i="sudo apt install -y "
 alias la="ls --almost-all --color=always"

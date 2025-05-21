@@ -20,6 +20,7 @@ set $ws10 "10"
 
 assign [class="vlc"] $ws10
 assign [class="mpv"] $ws9
+assign [class="vpn"] $ws10
 
 bindsym $mod+q kill
 bindsym $mod+h focus left
