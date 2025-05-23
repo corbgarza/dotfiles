@@ -1,8 +1,9 @@
+gaps inner 5
 floating_modifier $mod
-tiling_drag modifier titlebar
-gaps inner 9
-gaps outer 5
 default_border none
+assign [class="vlc"] $ws10
+assign [class="mpv"] $ws9
+assign [class="vpn"] $ws10
 
 set $mod Mod4
 set $ws1 "1"
@@ -16,22 +17,14 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-assign [class="vlc"] $ws10
-assign [class="mpv"] $ws9
-assign [class="vpn"] $ws10
-
 bindsym $mod+q kill
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $mod+r mode "resize"
 bindsym $mod+b split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
-bindsym $mod+space floating toggle
-bindsym $mod+Return exec kitty
-bindsym $mod+Tab exec /home/linuxbrew/.linuxbrew/bin/rofi -show drun
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -59,16 +52,6 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+m exec killall vlc
-bindsym $mod+Shift+p exec killall polybar
-
-mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym j resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-        bindsym $mod+r mode "default"
-}
 
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
@@ -80,9 +63,8 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
-exec --no-startup-id ~/.local/bin/wal -i ~/Wallpapers/
+exec --no-startup-id ~/.local/bin/wal -R
 exec --no-startup-id nm-applet
 exec --no-startup-id picom 
 exec --no-startup-id polybar
-exec --no-startup-id dbus-update-activation-environment --all
-exec --no-startup-id gnome-keyring-daemon --start --components=secrets
+exec --no-startup-id sxhkd -c ~/.config/sxhkd/sxhkdrc &

@@ -35,16 +35,10 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 
-#### check for and install required software ####
-if [[ ! -e ~/repos/powerlevel10k ]]; then git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/repos/powerlevel10k; echo "installing powerlevel10k"; fi
-if [[ ! -e ~/repos/zsh-syntax-highlighting ]]; then git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/repos/zsh-syntax-highlighting; echo "installing syntax-highlighting"; fi 
-if [[ ! -e ~/repos/zsh-autosuggestions ]]; then git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/repos/zsh-autosuggestions; echo "installing autosuggestions"; fi
-if [[ ! -e ~/dotfiles ]]; then git clone https://github.com/corbgarza/dotfiles $HOME/dotfiles; echo "installing dotfiles"; fi 
-
 source ~/repos/powerlevel10k/powerlevel10k.zsh-theme
 source ~/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/dotfiles/aliasscripts.sh
+source ~/aliases.sh
 
 if [[ -e /home/linuxbrew/.linuxbrew/bin/brew ]]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -54,6 +48,5 @@ if command -v zoxide > /dev/null; then
 	eval "$(zoxide init zsh)"
 fi
 
-# Created by `pipx` on 2025-05-10 12:46:59
-export PATH="$PATH:/home/corbgarza/.local/bin"
+export PATH="$PATH:/home/corbgarza/.local/bin:/home/corbgarza"
 export EDITOR="/home/linuxbrew/.linuxbrew/bin/nvim"
