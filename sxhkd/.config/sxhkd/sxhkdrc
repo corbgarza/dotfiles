@@ -13,4 +13,4 @@ super + shift + p
 super + p
 	polybar --config=~/.config/polybar/config.ini
 super + Tab
-	bash -c "quick.sh" &
+	quick.sh
