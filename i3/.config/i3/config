@@ -5,6 +5,12 @@ assign [class="vlc"] $ws10
 assign [class="mpv"] $ws9
 assign [class="vpn"] $ws10
 
+exec --no-startup-id ~/.local/bin/wal -R
+exec --no-startup-id nm-applet
+exec --no-startup-id picom 
+exec --no-startup-id polybar
+exec --no-startup-id sxhkd -c ~/.config/sxhkd/sxhkdrc &
+
 set $mod Mod4
 set $ws1 "1"
 set $ws2 "2"
@@ -62,9 +68,3 @@ client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
-
-exec --no-startup-id ~/.local/bin/wal -R
-exec --no-startup-id nm-applet
-exec --no-startup-id picom 
-exec --no-startup-id polybar
-exec --no-startup-id sxhkd -c ~/.config/sxhkd/sxhkdrc &

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 super + Escape
 	pkill -USR1 -x sxhkd
 super + Return
@@ -12,4 +13,4 @@ super + shift + p
 super + p
 	polybar --config=~/.config/polybar/config.ini
 super + m
-	/home/corbgarza/quick.sh
+	quick.sh

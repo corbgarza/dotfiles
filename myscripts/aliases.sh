@@ -1,4 +1,17 @@
 #!/usr/bin/env bash
+
+alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
+alias destroy="sudo apt purge -y "
+alias ff="fastfetch"
+alias i="sudo apt install -y "
+alias la="ls --almost-all --color=always"
+alias lla="ls --almost-all --human-readable --color=always -l"
+alias ll="ls -l --human-readable --color=always"
+alias ls="ls --color=always"
+alias rebootnow="sudo reboot now"
+alias shutdownnow="sudo shutdown now"
+alias v="nvim"
+
 #git add, commit, and push
 gacp () {
 	git add --all

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ANSWER=$(printf "Wallpaper\nMusic\nPolybar\naliases\ni3\nkitty\npicom\npolybar\nqutebrowser\nRofi\nsxhkd\nzsh" | rofi -dmenu)
+ANSWER=$(printf "Wallpaper\nMusic\nPolybar\nReboot\nShutdown\naliases\ni3\nkitty\npicom\npolybar\nqutebrowser\nRofi\nsxhkd\nzsh" | rofi -dmenu)
 
 case $ANSWER in
 	"Wallpaper")
@@ -11,6 +11,12 @@ case $ANSWER in
 	;;
 	"Polybar")
 	/usr/bin/polybar --config=~/.config/polybar/config.ini &
+	;;
+	"Reboot")
+		sudo reboot now
+	;;
+	"Shutdown")
+		sudo shutdown now
 	;;
 	"aliases")
 		nvim ~/aliases.sh
