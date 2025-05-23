@@ -4,7 +4,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 super + Return
 	kitty
-super + Tab 
+super + shift + Return
 	/home/linuxbrew/.linuxbrew/bin/rofi -show drun
 super + shift + m
 	killall vlc
@@ -12,5 +12,5 @@ super + shift + p
 	killall polybar
 super + p
 	polybar --config=~/.config/polybar/config.ini
-super + m
-	quick.sh
+super + Tab
+	bash -c "quick.sh" &
