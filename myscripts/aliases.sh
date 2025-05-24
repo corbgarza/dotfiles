@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
+alias config-i3="nvim ~/aliases.sh"
+alias config-kitty="nvim ~/.config/kitty/kitty.conf"
+alias config-picom="nvim ~/.config/picom/picom.conf"
+alias config-polybar="nvim ~/.config/polybar/config.ini"
+alias config-qute="nvim ~/.config/qutebrowser/config.py"
+alias config-rofi="nvim ~/.config/rofi/config.rasi"
+alias config-sxhkd="nvim ~/.config/sxhkd/sxhkdrc"
+alias config-zsh="nvim ~/.zshrc"
 alias destroy="sudo apt purge -y "
 alias ff="fastfetch"
 alias i="sudo apt install -y "
@@ -39,7 +47,7 @@ gitpushes () {
 search () {
 	cd /
 	sudo fzf -e
-	cd -
+cd -
 }
 
 #apt update, apt upgrade, apt autoremove, apt autoclean, tldr update, brew update, flatpak update
