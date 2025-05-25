@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
-alias config-i3="nvim ~/aliases.sh"
+alias config-i3="nvim ~/.config/i3/config"
+alias config-aliases="nvim ~/aliases.sh"
 alias config-kitty="nvim ~/.config/kitty/kitty.conf"
 alias config-picom="nvim ~/.config/picom/picom.conf"
 alias config-polybar="nvim ~/.config/polybar/config.ini"
