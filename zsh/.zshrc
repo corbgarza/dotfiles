@@ -6,9 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source ~/repos/powerlevel10k/powerlevel10k.zsh-theme
-source ~/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/aliases.sh
 
 export EDITOR="/home/linuxbrew/.linuxbrew/bin/nvim"
