@@ -9,7 +9,7 @@ exec --no-startup-id ~/.local/bin/wal -R
 exec --no-startup-id nm-applet
 exec --no-startup-id picom 
 exec --no-startup-id polybar
-bindsym $mod+s exec sxhkd
+exec --no-startup-id sxhkd
 
 set $mod Mod4
 set $ws1 "1"
