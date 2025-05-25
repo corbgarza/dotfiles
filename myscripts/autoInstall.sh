@@ -1,4 +1,4 @@
-sudo apt install -y brightnessctl btop curl eza fastfetch feh ffmpeg fonts-noto-color-emoji fzf gcc git i3 imagemagick kitty mpv network-manager nm-tray openssh-client openssh-server picom pipx polybar psmisc pulseaudio python3 ripgrep rofi stow sxhkd startx tealdeer x11-xserver-utils xsel zoxide zsh
+sudo apt install -y brightnessctl btop curl eza fastfetch feh ffmpeg fonts-noto-color-emoji fzf gcc git i3 imagemagick kitty mpv network-manager openssh-client openssh-server picom pipx polybar psmisc pulseaudio python3 ripgrep rofi stow sxhkd startx tealdeer x11-xserver-utils xsel zoxide zsh
 
 pipx install pywal16 spotdl yt-dlp
 
