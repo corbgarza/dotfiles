@@ -1,15 +1,15 @@
 #### To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. ####
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.config/.p10k.zsh
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 #### Enable Powerlevel10k instant prompt ####
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/aliases.sh
+source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/aliases.sh
 
 export EDITOR="/home/linuxbrew/.linuxbrew/bin/nvim"
 
