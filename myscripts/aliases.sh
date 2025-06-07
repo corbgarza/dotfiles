@@ -52,12 +52,9 @@ pkgsearch () {
 	flatpak search $1 && echo -e "\n#### flatpak results completed ####\n"
 }
 
-#yt-dlp termux
-ytt () {
-	yt-dlp --paths '~/storage/movies/YouTube/' -o '%(title)s.%(ext)s' --embed-chapters --sponsorblock-remove sponsor $1
-}
-
-#yt-dlp debian
-ytd () {
-	yt-dlp --paths '~/Videos' -o '%(title)s.%(ext)s' --embed-chapters --sponsorblock-remove sponsor $1
+yt () {
+	[[ -d $HOME/storage/movies/YouTube ]] && PATHS="$HOME/storage/movies/Youtube"
+	[[ -d $HOME/YouTube ]] && PATHS="$HOME/Youtube"
+	[[[ -f $HOME/yt.urls ]] && yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters -a "$HOME/yt.urls" ] || \
+	yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters $1
 }
