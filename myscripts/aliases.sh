@@ -18,7 +18,6 @@ alias la="eza -a"
 alias lla="eza -la"
 alias ll="eza -l"
 alias ls="eza"
-alias rnow="sudo reboot now"
 alias snow="sudo shutdown now"
 alias v="nvim"
 
@@ -53,7 +52,7 @@ pkgsearch () {
 }
 
 yt () {
-	[[ -d $HOME/storage/movies/YouTube ]] && PATHS="$HOME/storage/movies/Youtube"
+	[[ -d $HOME/storage/movies/ytdlp ]] && PATHS="$HOME/storage/movies/ytdlp"
 	[[ -d $HOME/YouTube ]] && PATHS="$HOME/Youtube"
 	[[[ -f $HOME/yt.urls ]] && yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters -a "$HOME/yt.urls" ] || \
 	yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters $1
