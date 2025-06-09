@@ -54,5 +54,5 @@ pkgsearch () {
 yt () {
 	[[ -d $HOME/storage/movies/ytdlp ]] && PATHS="$HOME/storage/movies/ytdlp"
 	[[ -d $HOME/YouTube ]] && PATHS="$HOME/Youtube"
-	[[ -f $HOME/yt.urls ]] && yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters -a "$HOME/yt.urls" || yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters $1
+	[[ $# -eq 0 ]] && yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters -a "$HOME/yt.urls" || yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters $1
 }
