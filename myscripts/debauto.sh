@@ -1,3 +1,4 @@
+cd $HOME/dotfiles
 git remote set-url origin git@github.com:corbgarza/dotfiles.git
 sudo apt install -y curl
 source $HOME/dotfiles/myscripts/progs.csv
