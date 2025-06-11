@@ -41,3 +41,9 @@ b,bat
 b,nvim
 b,yazi
 b,yazi
+
+g,corbgarza/kickstart.nvim.git
+g,corbgarza/Wallpaper.git
+g,romkatv/powerlevel10k.git
+g,zsh-users/zsh-syntax-highlighting.git
+g,zsh-users/zsh-autosuggestions

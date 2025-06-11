@@ -38,7 +38,6 @@ if command -v zoxide > /dev/null; then
 fi
 
 alias config-i3="nvim ~/.config/i3/config"
-alias config-aliases="nvim ~/aliases.sh"
 alias config-kitty="nvim ~/.config/kitty/kitty.conf"
 alias config-picom="nvim ~/.config/picom/picom.conf"
 alias config-polybar="nvim ~/.config/polybar/config.ini"
@@ -49,13 +48,11 @@ alias config-zsh="nvim ~/.zshrc"
 
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias destroy="sudo apt purge -y "
-alias ff="fastfetch"
 alias i="sudo apt install -y "
 alias la="eza -a"
 alias lla="eza -la"
 alias ll="eza -l"
 alias ls="eza"
-alias snow="sudo shutdown now"
 alias v="nvim"
 
 #git add, commit, and push
