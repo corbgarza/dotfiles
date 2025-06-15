@@ -44,7 +44,7 @@ alias config-polybar="nvim ~/.config/polybar/config.ini"
 alias config-qute="nvim ~/.config/qutebrowser/config.py"
 alias config-rofi="nvim ~/.config/rofi/config.rasi"
 alias config-sxhkd="nvim ~/.config/sxhkd/sxhkdrc"
-alias config-zsh="nvim ~/.zshrc"
+alias config-zsh="nvim ~/.zshrc; source ~/.zshrc"
 
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias destroy="sudo apt purge -y "

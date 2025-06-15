@@ -1,19 +1,18 @@
-cd $HOME/dotfiles
 git remote set-url origin git@github.com:corbgarza/dotfiles.git
 sudo apt install -y curl
 source $HOME/dotfiles/myscripts/progs.csv
 mkdir -p $HOME/.config 
 gitpath="$HOME/.config/"
 
-for prog in progs.csv; do
-#if a, then apt
+for prog in $(cat progs.csv); do
+	awk '{print $1}' prog > PKGMAN
 	sudo apt install -y $prog
 #if b, then brew
 	brew install $prog
 #if p, then pip
 	pipx install $prog
 #if g, git clone --depth=1
-	git clone --depth=1 $prog $gitpath
+	git clone --depth=1 https://github.com/$prog $gitpath
 done
 
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
