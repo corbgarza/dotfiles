@@ -1,11 +1,16 @@
 #!/bin/env bash
 source gym.txt
-EXERCISETYPE=""
-EXERCISE=""
-BANDS=0
-CHAINS=0
-WEIGHT=0
-SETS=0
-REPS=0
 
+ARRAY=("" 0 0 0 0 0)
+writeExercise () {
+	for z in ${!ARRAY[@]}; do
+	read -p "$z = " y
+	ARRAY+=([$z]=$y)
+	done
+}
 
+readExercise () {
+	
+}
+
+writeExercise
