@@ -71,8 +71,7 @@ search () {
 
 #apt update, apt upgrade, apt autoremove, apt autoclean, tldr update, brew update, flatpak update
 updater () {
-	sudo apt update -y && sudo apt upgrade -y
-	sudo apt autoremove -y && sudo apt autoclean -y
+	sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
 	tldr --update
 	brew update && brew upgrade
 	flatpak update
@@ -90,6 +89,3 @@ yt () {
 	[[ -d $HOME/YouTube ]] && PATHS="$HOME/Youtube"
 	[[ $# -eq 0 ]] && yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters -a "$HOME/yt.urls" || yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters $1
 }
-
-# To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k/.p10k.zsh.
-[[ ! -f ~/dotfiles/p10k/.p10k.zsh ]] || source ~/dotfiles/p10k/.p10k.zsh

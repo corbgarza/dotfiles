@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 super + Escape
 	pkill -USR1 -x sxhkd
 super + Return
@@ -7,7 +6,7 @@ super + Return
 super + shift + Return
 	qutebrowser
 super + Tab
-	/home/linuxbrew/.linuxbrew/bin/rofi -show drun
+	$(which rofi) -show drun
 super + m 
 	vlc ~/Music --random &
 super + shift + m
@@ -17,4 +16,4 @@ super + p
 super + shift + p
 	killall polybar
 super + w
-	wal -i ~/Wallpaper &
+	wal -i ~/.config/Wallpaper &

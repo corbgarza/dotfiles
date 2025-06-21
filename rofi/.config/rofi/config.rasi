@@ -1,9 +1,7 @@
-@import "~/.cache/wal/colors-rofi-dark"
 configuration {
-	combi-modi: "drun,Custom:~/.config/rofi/rofiScripts.sh";
+	combi-modi: "drun";
 	font: "MesloLGS NF 14";
 	show-icons: true;
 	terminal: "kitty";
 	case-sensitive: false;
 }
-
