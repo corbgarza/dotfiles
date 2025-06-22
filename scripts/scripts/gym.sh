@@ -1,16 +1,23 @@
 #!/bin/env bash
 
+txtFile=$HOME/scripts/gym.txt
+ARRAY=(EXERCISE SETS REPS WEIGHT CHAINS BANDS)
+
 readExercise () {
-	readarray ARRAY < $HOME/scripts/gym.txt
+	readarray ARRAY <$txtfile
 }
 
 writeExercise () {
-	for z in ${!ARRAY[@]}; do
+	for z in ${ARRAY[@]}; do
 	read -p "$z = " y
-	ARRAY+=([$z]=$y)
+	ARRAY2+=($y)
 	done
+	echo ${ARRAY2[@]} >> $txtFile
 }
 
 readExercise
-echo ${ARRAY[@]}
-#writeExercise
+x=0
+while [ $x -ne 1 ]; do
+	writeExercise
+	read -p $'1. Quit?\n2. Continue? ' x
+done
