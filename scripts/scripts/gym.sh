@@ -1,9 +1,7 @@
 #!/bin/env bash
 
 readExercise () {
-	while read line; do
-	echo $line | awk {print}
-	done <$HOME/scripts/gym.txt
+	readarray ARRAY < $HOME/scripts/gym.txt
 }
 
 writeExercise () {
@@ -13,4 +11,6 @@ writeExercise () {
 	done
 }
 
-writeExercise
+readExercise
+echo ${ARRAY[@]}
+#writeExercise
