@@ -23,12 +23,14 @@ a,polybar
 a,psmisc
 a,pulseaudio
 a,python3
+a,qutebrowser
 a,ripgrep
 a,rofi
 a,stow
 a,sxhkd
 a,startx
 a,tealdeer
+a,vlc
 a,x11-xserver-utils
 a,xsel
 a,zoxide

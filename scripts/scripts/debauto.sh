@@ -4,9 +4,9 @@ curl -fsS https://dl.brave.com/install.sh | sh > /dev/null && echo "Installed Br
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash > /dev/null && echo "Installed Brew!"
 while IFS=, read -r installer package; do	
 	case "$installer" in
-	"a") sudo apt install -y "$package" > /dev/null && echo "Installed $package!" ;;
-	"b") /home/linuxbrew/.linuxbrew/bin/brew install "$package" > /dev/null && echo "Installed $package!";;
-	"p") pipx install "$package" > /dev/null && echo "Installed $package!" ;;
+	"a") sudo apt install -y $package > /dev/null && echo "Installed $package!" ;;
+	"b") /home/linuxbrew/.linuxbrew/bin/brew install $package > /dev/null && echo "Installed $package!";;
+	"p") pipx install $package > /dev/null && echo "Installed $package!" ;;
 	"g") gitpath=$HOME/.config/$(echo $package | awk -F "." '{print $(NF-1)}') && git clone --depth=1 https://github.com/$package $gitpath > /dev/null && echo "Installed $package!" ;;
 	esac
 done <$HOME/dotfiles/scripts/scripts/debautoprogs.csv
