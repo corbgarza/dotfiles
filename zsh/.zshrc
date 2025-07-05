@@ -37,14 +37,15 @@ if command -v zoxide > /dev/null; then
 	eval "$(zoxide init zsh)"
 fi
 
-alias config-i3="nvim ~/.config/i3/config"
-alias config-kitty="nvim ~/.config/kitty/kitty.conf"
-alias config-picom="nvim ~/.config/picom/picom.conf"
-alias config-polybar="nvim ~/.config/polybar/config.ini"
-alias config-qute="nvim ~/.config/qutebrowser/config.py"
-alias config-rofi="nvim ~/.config/rofi/config.rasi"
-alias config-sxhkd="nvim ~/.config/sxhkd/sxhkdrc"
-alias config-zsh="nvim ~/.zshrc; source ~/.zshrc"
+alias ci3="nvim ~/.config/i3/config"
+alias ckitty="nvim ~/.config/kitty/kitty.conf"
+alias cpicom="nvim ~/.config/picom/picom.conf"
+alias cpolybar="nvim ~/.config/polybar/config.ini"
+alias cqute="nvim ~/.config/qutebrowser/config.py"
+alias crofi="nvim ~/.config/rofi/config.rasi"
+alias csxhkd="nvim ~/.config/sxhkd/sxhkdrc"
+alias cyt="nvim ~/scripts/yt.urls"
+alias czsh="nvim ~/.zshrc; source ~/.zshrc"
 
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias destroy="sudo apt purge -y "
@@ -55,6 +56,7 @@ alias ll="eza -l"
 alias ls="eza"
 alias v="nvim"
 
+BATCH=$HOME/.config/yt-dlp/yt.urls
 #git add, commit, and push
 gacp () {
 	git add --all
@@ -85,7 +87,7 @@ pkgsearch () {
 }
 
 yt () {
-	[[ -d $HOME/storage/movies/ytdlp ]] && PATHS="$HOME/storage/movies/ytdlp"
-	[[ -d $HOME/YouTube ]] && PATHS="$HOME/Youtube"
-	[[ $# -eq 0 ]] && yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters -a "$HOME/yt.urls" || yt-dlp --paths $PATHS -o '%(title)s.%(ext)s' --embed-chapters $1
+	[[ -d $HOME/storage/movies/ytdlp ]] && PATHS="$HOME/storage/movies/ytdlp" || PATHS="$HOME/Youtube"
+	[[ $# -eq 0 ]] && yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config -a $HOME/.config/yt-dlp/urls
+	[[ $# -ne 0 ]] && yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config $@
 }
