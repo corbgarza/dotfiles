@@ -1,0 +1,10 @@
+--restrict-filenames
+--no-overwrites
+--concurrent-fragments 4
+--output "%(title)s"
+--write-thumbnail
+--write-subs
+--embed-subs
+--embed-thumbnail
+--embed-chapters
+--sponsorblock-remove sponsor
