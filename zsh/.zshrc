@@ -38,6 +38,7 @@ if command -v zoxide > /dev/null; then
 fi
 
 alias ci3="nvim ~/.config/i3/config"
+alias cfish="nvim ~/.config/fish/config.fish"
 alias ckitty="nvim ~/.config/kitty/kitty.conf"
 alias cpicom="nvim ~/.config/picom/picom.conf"
 alias cpolybar="nvim ~/.config/polybar/config.ini"
@@ -45,7 +46,8 @@ alias cqute="nvim ~/.config/qutebrowser/config.py"
 alias crofi="nvim ~/.config/rofi/config.rasi"
 alias csxhkd="nvim ~/.config/sxhkd/sxhkdrc"
 alias cyt="nvim ~/scripts/yt.urls"
-alias czsh="nvim ~/.zshrc; source ~/.zshrc"
+alias czsh="nvim ~/.zshrc"
+alias treee="tree -a -C -I '.git|.android|.cache|.cargo|.local'"
 
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias destroy="sudo apt purge -y "
