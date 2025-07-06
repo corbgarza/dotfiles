@@ -11,7 +11,7 @@ while IFS=, read -r installer package; do
 	esac
 done <$HOME/dotfiles/scripts/scripts/debauto.progs
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher; echo "Installed Fisher!"
-stow -d $HOME/dotfiles -t $HOME --ignore=*.ttf && sudo cp $HOME/dotfiles/fonts/* /usr/local/share/fonts/
+sudo cp $HOME/dotfiles/fonts/* /usr/local/share/fonts/
 sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub && sudo update-grub
 sudo echo "export EDITOR=$(which nvim)" >> /root/.profile
 sudo echo "$(which fish)" >> /etc/shells
