@@ -14,10 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-vim.opt.rtp:prepend(lazypath)
-vim.opt.relativenumber = true
 vim.opt.smarttab = true
-vim.opt.number = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.wrap = true
