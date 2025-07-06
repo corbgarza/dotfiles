@@ -7,7 +7,6 @@ alias ci3="nvim ~/.config/i3/config"
 alias cfish="nvim ~/.config/fish/config.fish"
 alias ckitty="nvim ~/.config/kitty/kitty.conf"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
-alias cnvim="nvim ~/.config/nvim/init.lua"
 alias cpicom="nvim ~/.config/picom/picom.conf"
 alias cpolybar="nvim ~/.config/polybar/config.ini"
 alias cqute="nvim ~/.config/qutebrowser/config.py"
@@ -25,7 +24,12 @@ alias ls="eza"
 alias search="cd /; sudo fzf -e; cd -"
 alias sf="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git|.android|.cache|.cargo|.local'"
-alias v="nvim"
+
+function cnvim
+    while not nvim ~/.config/nvim/init.lua;
+        echo "restarting nvim...";
+    end
+end
 
 function updater
 	sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y

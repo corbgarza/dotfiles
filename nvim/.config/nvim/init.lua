@@ -13,12 +13,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
-vim.opt.rtp:prepend(lazypath)
-vim.opt.smarttab = true
+vim.opt.cursorline = true
 vim.opt.ignorecase = true
+vim.opt.rtp:prepend(lazypath)
+vim.o.scrolloff = 20
 vim.opt.smartcase = true
-vim.opt.wrap = true
+vim.opt.smarttab = true
 vim.opt.tabstop = 2
+vim.opt.wrap = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
