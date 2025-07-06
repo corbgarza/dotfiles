@@ -48,6 +48,7 @@ alias csxhkd="nvim ~/.config/sxhkd/sxhkdrc"
 alias cyt="nvim ~/scripts/yt.urls"
 alias czsh="nvim ~/.zshrc"
 alias treee="tree -a -C -I '.git|.android|.cache|.cargo|.local'"
+alias sz="source ~/.zshrc"
 
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias destroy="sudo apt purge -y "
