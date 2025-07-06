@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 git remote set-url origin git@github.com:corbgarza/dotfiles.git
 mkdir -p $HOME/.config
 curl -fsS https://dl.brave.com/install.sh | sh > /dev/null && echo "Installed Brave!"
