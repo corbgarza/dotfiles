@@ -53,8 +53,13 @@ function pkgsearch
 end
 
 set BATCH $HOME/.config/yt-dlp/yt.urls
+
 function yt
-	[[ -d $HOME/storage/movies/ytdlp ]] && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/Youtube"
-	[[ count $argv -eq 0 ]] && yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config -a $HOME/.config/yt-dlp/urls
-	[[ count $argv -ne 0 ]] && yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config $argv
+	test -d $HOME/storage/movies/ytdlp && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/Youtube"
+
+if count $argv
+				yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config -a $HOME/.config/yt-dlp/urls
+else
+				yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config $argv
+end
 end
