@@ -9,11 +9,10 @@ while IFS=, read -r installer package; do
 	"p") pipx install $package > /dev/null && echo "Installed $package!" ;;
 	"g") gitpath=$HOME/.config/$(echo $package | awk -F "." '{print $(NF-1)}') && git clone --depth=1 https://github.com/$package $gitpath > /dev/null && echo "Installed $package!" ;;
 	esac
-done <$HOME/dotfiles/scripts/scripts/debautoprogs.csv
+done <$HOME/dotfiles/scripts/scripts/debauto.progs
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher; echo "Installed Fisher!"
 stow -d $HOME/dotfiles -t $HOME --ignore=*.ttf && sudo cp $HOME/dotfiles/fonts/* /usr/local/share/fonts/
 sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub && sudo update-grub
 sudo echo "export EDITOR=$(which nvim)" >> /root/.profile
-echo "export PATH=$PATH:$HOME/scripts" >> $HOME/.xinitrc
-sudo echo "$(which zsh)" >> /etc/shells
-chsh -s $(which zsh)
+sudo echo "$(which fish)" >> /etc/shells
+chsh -s $(which fish)

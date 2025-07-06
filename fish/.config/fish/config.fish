@@ -1,4 +1,9 @@
+if test -e /home/linuxbrew/.linuxbrew/bin/brew
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+end
+
 zoxide init fish | source
+
 alias ci3="nvim ~/.config/i3/config"
 alias cfish="nvim ~/.config/fish/config.fish"
 alias ckitty="nvim ~/.config/kitty/kitty.conf"
