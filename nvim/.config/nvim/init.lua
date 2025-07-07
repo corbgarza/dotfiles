@@ -13,6 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.rtp:prepend(lazypath)
@@ -37,8 +38,10 @@ spec = { {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, bu
 {"neovim/nvim-lspconfig", lazy = false, dependencies = {{ "ms-jpq/coq_nvim", branch = "coq" }, { "ms-jpq/coq.artifacts", branch = "artifacts" },},
   init = function()
     vim.g.coq_settings = { auto_start = 'shut-up' }end,
-}
 },
-install = { colorscheme = { "habamax" } },
+{"folke/tokyonight.nvim", lazy = false}
+},
 checker = { enabled = true },
 })
+
+vim.cmd[[colorscheme tokyonight-night]]
