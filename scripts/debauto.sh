@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+sudo apt install -y nala git curl
+git clone https://github.com/corbgarza/dotfiles.git $HOME/dotfiles.git
+cd $HOME/dotfiles
 git remote set-url origin git@github.com:corbgarza/dotfiles.git
 mkdir -p $HOME/.config
 curl -fsS https://dl.brave.com/install.sh | sh > /dev/null && echo "Installed Brave!"
