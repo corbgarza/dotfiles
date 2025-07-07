@@ -4,26 +4,18 @@ end
 zoxide init fish | source
 set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
+set -U fish_greeting ""
 
-alias ci3="nvim ~/.config/i3/config"
 alias cfish="nvim ~/.config/fish/config.fish"
-alias ckitty="nvim ~/.config/kitty/kitty.conf"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
-alias cpicom="nvim ~/.config/picom/picom.conf"
-alias cpolybar="nvim ~/.config/polybar/config.ini"
-alias cqute="nvim ~/.config/qutebrowser/config.py"
-alias crofi="nvim ~/.config/rofi/config.rasi"
-alias csxhkd="nvim ~/.config/sxhkd/sxhkdrc"
-alias cyt="nvim ~/scripts/yt.urls"
 alias czsh="nvim ~/.zshrc"
 alias destroy="sudo apt purge -y "
-alias gacp="cd $HOME/dotfiles; git add --all && git commit --all --message "update" && git push; cd -"
 alias i="sudo apt install -y "
-alias la="eza -a"
-alias lla="eza -la"
-alias ll="eza -l"
-alias ls="eza"
-alias search="cd /; sudo fzf -e; cd -"
+alias fzfs="fzf -e -i -m --wrap --preview='bat {}'"
+alias la="eza -a --color=always"
+alias lla="eza -la --color=always"
+alias ll="eza -l --color=always"
+alias ls="eza --color=always"
 alias sf="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git'"
 alias v="nvim"
@@ -34,6 +26,19 @@ function cnvim
     end
 end
 
+function search
+  cd / &&
+	sudo fzf -e -i -m --wrap --preview="bat {}" 
+	cd -
+end
+
+function gacp
+  cd $HOME/dotfiles
+	git add --all &&
+	git commit --all --message "update" &&
+	git push &&
+	cd -
+end
 function updater
 	sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
 	type -q tldr && tldr --update
