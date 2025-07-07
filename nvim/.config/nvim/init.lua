@@ -26,11 +26,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.keymap.set('n', '<leader>L', '<cmd>Lazy<cr>')
-vim.keymap.set('n', '<leader>T', '<cmd>Neotree filesystem reveal right<cr>')
+vim.keymap.set('n', '<leader>t', '<cmd>Neotree filesystem reveal left<cr>')
+vim.keymap.set('n', '<leader>T', '<cmd>terminal<cr>')
 
 require("lazy").setup({
 spec = { {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"},
-{"nvim-neo-tree/neo-tree.nvim", lazy = false, dependencies = { 'MunifTanjim/nui.nvim' }, lazy = false},
+{"nvim-neo-tree/neo-tree.nvim", lazy = false, dependencies = { 'MunifTanjim/nui.nvim' }, opts = { filesystem = { filtered_items = { visible = "true" }, }, }, },
 {"norcalli/nvim-colorizer.lua", lazy = false},
 {'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
 {'windwp/nvim-autopairs', event = "InsertEnter", config = true},
