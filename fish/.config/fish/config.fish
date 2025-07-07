@@ -26,6 +26,7 @@ alias ls="eza"
 alias search="cd /; sudo fzf -e; cd -"
 alias sf="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git|.android|.cache|.cargo|.local'"
+alias v="nvim"
 
 function cnvim
     while not nvim ~/.config/nvim/init.lua;
