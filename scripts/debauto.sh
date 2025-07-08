@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-[[ command -v nala ]] || echo "Install curl, git and nala!"; exit 1
-git clone https://github.com/corbgarza/dotfiles.git $HOME/dotfiles.git
-cd $HOME/dotfiles
-git remote set-url origin git@github.com:corbgarza/dotfiles.git
-mkdir -p $HOME/.config
+
+sudo nala install -y nala git
+git clone https://github.com/corbgarza/dotfiles.git $HOME/dotfiles
 curl -fsS https://dl.brave.com/install.sh | sh > /dev/null && echo "Installed Brave!"
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash > /dev/null && echo "Installed Brew!"
 total=$(wc -l <$HOME$HOME/dotfiles/scripts/debauto.progs)
@@ -18,10 +16,13 @@ while IFS=, read -r installer package; do
 	esac
 done <$HOME/dotfiles/scripts/debauto.progs
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher; echo "Installed Fisher!"
+echo "Done installing!... Finishing setup!"
+cd $HOME/dotfiles && git remote set-url origin git@github.com:corbgarza/dotfiles.git
+mkdir -p $HOME/.config
+stow -t $HOME -d $HOME/dotfiles && echo "Stowed dotfiled!"
 sudo cp $HOME/dotfiles/fonts/* /usr/local/share/fonts/ && echo "Copied Fonts!"
-sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub && sudo update-grub
-sudo echo "export EDITOR=$(which nvim)" >> /root/.profile && echo "Nvim is root EDITOR!"
-sudo echo "$(which fish)" >> /etc/shells && echo "Added fish to shells!"
+sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub && sudo update-grub > /dev/null && echo "Updated Grub!"
+sudo echo "export EDITOR=$(which nvim)" >> /root/.profile && echo "root EDITOR is set to nvim!"
+sudo echo "$(which fish)" >> /etc/shells && echo "Added fish to /etc/shells!"
 chsh -s $(which fish) && echo "Changed default shell to fish!"
-echo "Stow dotfiles and then reboot to complete setup!"
-cd $HONE/dotfiles
+echo "Done! Reboot to complete!"

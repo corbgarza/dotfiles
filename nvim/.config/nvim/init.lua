@@ -25,7 +25,7 @@ vim.opt.wrap = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.keymap.set('n', '<leader>L', '<cmd>Lazy<cr>')
+vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')
 vim.keymap.set('n', '<leader>t', '<cmd>Neotree filesystem reveal left<cr>')
 vim.keymap.set('n', '<leader>T', '<cmd>terminal<cr>')
 
