@@ -55,9 +55,9 @@ end
 function yt
   set BATCH $HOME/.config/yt-dlp/yt.urls
 	test -d $HOME/storage/movies/ytdlp && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/ytdlp"
-  if count "$argv" = 0
-				yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config -a $HOME/.config/yt-dlp/urls
-  else
+  if count $argv > /dev/null
 				yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config $argv
+  else
+				yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config -a $HOME/.config/yt-dlp/urls
   end
 end
