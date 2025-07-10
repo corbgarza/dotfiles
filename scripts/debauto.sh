@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-sudo nala install -y nala git
+sudo apt install -y nala git
 git clone https://github.com/corbgarza/dotfiles.git $HOME/dotfiles
 curl -fsS https://dl.brave.com/install.sh | sh > /dev/null && echo "Installed Brave!"
 sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash > /dev/null && echo "Installed Brew!"
 total=$(wc -l <$HOME$HOME/dotfiles/scripts/debauto.progs)
+echo "Total packages to instsll: $total"
 while IFS=, read -r installer package; do	
   gitpath=$HOME/.config/$(echo $package | awk -F "." '{print $(NF-1)}')
   n=$((n + 1))
@@ -19,7 +20,7 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 echo "Done installing!... Finishing setup!"
 cd $HOME/dotfiles && git remote set-url origin git@github.com:corbgarza/dotfiles.git
 mkdir -p $HOME/.config
-stow -t $HOME -d $HOME/dotfiles && echo "Stowed dotfiled!"
+stow -t $HOME -d $HOME/dotfiles && echo "Stowed dotfiles!"
 sudo cp $HOME/dotfiles/fonts/* /usr/local/share/fonts/ && echo "Copied Fonts!"
 sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub && sudo update-grub > /dev/null && echo "Updated Grub!"
 sudo echo "export EDITOR=$(which nvim)" >> /root/.profile && echo "root EDITOR is set to nvim!"

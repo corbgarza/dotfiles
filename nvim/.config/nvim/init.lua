@@ -1,18 +1,5 @@
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
-end
 
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
@@ -28,9 +15,11 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')
 vim.keymap.set('n', '<leader>t', '<cmd>Neotree filesystem reveal left<cr>')
 vim.keymap.set('n', '<leader>T', '<cmd>terminal<cr>')
+vim.keymap.set('n', '<leader>n', '<cmd>set number! relativenumber!<cr>')
 
 require("lazy").setup({
-spec = { {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"},
+spec = { 
+{"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"},
 {"nvim-neo-tree/neo-tree.nvim", lazy = false, dependencies = { 'MunifTanjim/nui.nvim' }, opts = { filesystem = { filtered_items = { visible = "true" }, }, }, },
 {"norcalli/nvim-colorizer.lua", lazy = false},
 {'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
