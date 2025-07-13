@@ -16,7 +16,6 @@ while IFS=, read -r installer package; do
 	esac
 done <$HOME/dotfiles/scripts/debauto.progs
 cd $HOME/dotfiles && git remote set-url origin git@github.com:corbgarza/dotfiles.git >/dev/null && echo "Set dotfiles url!"
-mkdir -p $HOME/.config
 sudo cp $HOME/dotfiles/fonts/* /usr/local/share/fonts/ && echo "Copied Fonts!"
 sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub && sudo update-grub > /dev/null && echo "Updated Grub!"
 #sudo echo "export EDITOR=$(which nvim)" >> /root/.profile && echo "root EDITOR is set to nvim!"
