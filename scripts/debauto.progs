@@ -2,7 +2,6 @@ installer,package
 a,bat
 a,brightnessctl
 a,btop
-a,curl
 a,eza
 b,fd
 a,feh
@@ -16,7 +15,6 @@ a,i3
 a,imagemagick
 a,kitty
 a,mpv
-a,nala
 a,network-manager
 a,neovim
 a,openssh-client
