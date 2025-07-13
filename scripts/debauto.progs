@@ -4,10 +4,9 @@ a,brightnessctl
 a,btop
 a,curl
 a,eza
-a,fd
+b,fd
 a,feh
 a,ffmpeg
-a,figlet
 a,fish
 a,fonts-noto-color-emoji
 a,fzf
@@ -35,10 +34,12 @@ a,stow
 a,sxhkd
 a,startx
 a,tealdeer
+a,virt-manager
 a,vlc
 a,x11-xserver-utils
+a,xinit
 a,xsel
 a,zoxide
-p,pywal16
 p,spotdl
 p,yt-dlp
+p,pywal16
