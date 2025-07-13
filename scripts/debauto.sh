@@ -21,4 +21,5 @@ sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub && sudo update-
 #sudo echo "export EDITOR=$(which nvim)" >> /root/.profile && echo "root EDITOR is set to nvim!"
 chsh -s $(which fish) && echo "Changed default shell to fish!"
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"; echo 'Installed Fisher!'
+stow -v -t ~/.config -d ~/dotfiles fish gitconfig i3 kitty nvim picom polybar/ qutebrowser/ rofi sxhkd/ yt-dlp/
 echo "Done! Reboot to complete!"
