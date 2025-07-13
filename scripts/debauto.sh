@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 sudo apt install -y nala git
-git clone https://github.com/corbgarza/dotfiles.git $HOME/dotfiles
+git clone https://github.com/corbgarza/dotfiles.git $HOME/dotfiles >/dev/null && echo "Cloned dotfiles!"
 #curl -fsS https://dl.brave.com/install.sh | sh > /dev/null && echo "Installed Brave!"
-sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash > /dev/null && echo "Installed Brew!"
+sudo curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash >/dev/null && echo "Installed Brew!"
 total=$(wc -l <$HOME/dotfiles/scripts/debauto.progs)
 echo "Total packages to instsll: $total"
 while IFS=, read -r installer package; do	

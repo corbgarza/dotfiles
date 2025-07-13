@@ -30,9 +30,12 @@ vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')
 vim.keymap.set('n', '<leader>t', '<cmd>Neotree filesystem reveal left<cr>')
 vim.keymap.set('n', '<leader>T', '<cmd>terminal<cr>')
 vim.keymap.set('n', '<leader>n', '<cmd>set number! relativenumber!<cr>')
-vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
+vim.keymap.set('n', '<leader>ww', '<cmd>w<cr>')
+vim.keymap.set('n', '<leader>wq', '<cmd>wq<cr>')
+vim.keymap.set('n', '<leader>wr', '<cmd>set wrap!<cr>')
 vim.keymap.set('n', '<leader>c', '<cmd>cq<cr>')
 vim.keymap.set('n', '<leader>q', '<cmd>q<cr>')
+
 
 require("lazy").setup({
 spec = { 
