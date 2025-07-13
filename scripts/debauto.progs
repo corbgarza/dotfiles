@@ -18,7 +18,7 @@ a,kitty
 a,mpv
 a,nala
 a,network-manager
-a,nvim
+a,neovim
 a,openssh-client
 a,openssh-server
 a,picom
@@ -32,7 +32,6 @@ a,ripgrep
 a,rofi
 a,stow
 a,sxhkd
-a,startx
 a,tealdeer
 a,virt-manager
 a,vlc
