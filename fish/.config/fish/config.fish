@@ -35,8 +35,16 @@ function search
 	cd -
 end
 
-function gacp
+function gacpd
   cd $HOME/dotfiles
+	git add --all &&
+	git commit --all --message "update" &&
+	git push &&
+	cd -
+end
+
+function gacpp
+  cd $HOME/projects
 	git add --all &&
 	git commit --all --message "update" &&
 	git push &&
