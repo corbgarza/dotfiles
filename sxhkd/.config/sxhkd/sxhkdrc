@@ -6,7 +6,7 @@ super + Return
 super + shift + Return
 	qutebrowser
 super + Tab
-	$(which rofi) -show drun
+	rofi -show drun
 super + m 
 	vlc ~/Music --random &
 super + shift + m
