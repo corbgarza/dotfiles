@@ -5,6 +5,7 @@ zoxide init fish | source
 set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
 set -U fish_greeting ""
+set -gx PATH $PATH:$HOME/.local/bin
 
 alias cfish="nvim ~/.config/fish/config.fish"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
@@ -67,10 +68,11 @@ end
 
 function yt
   set BATCH $HOME/.config/yt-dlp/yt.urls
+	set CONFIG $HOME/.config/yt-dlp/config
 	test -d $HOME/storage/movies/ytdlp && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/ytdlp"
   if count $argv > /dev/null
-				yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config $argv
+				yt-dlp --paths $PATHS --config-locations $CONFIG $argv
   else
-				yt-dlp --paths $PATHS --config-locations $HOME/.config/yt-dlp/config -a $HOME/.config/yt-dlp/urls
+				yt-dlp --paths $PATHS --config-locations $CONFIG
   end
 end
