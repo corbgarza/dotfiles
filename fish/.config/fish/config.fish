@@ -30,6 +30,12 @@ function cnvim
     end
 end
 
+function vim
+    while not nvim $argv;
+        echo "restarting nvim";
+    end
+end
+
 function search
   cd / &&
 	sudo fzf -e -i -m --wrap --preview="bat {}" 
