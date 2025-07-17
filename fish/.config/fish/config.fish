@@ -1,6 +1,7 @@
 if test -e /home/linuxbrew/.linuxbrew/bin/brew
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 end
+
 zoxide init fish | source
 set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
@@ -10,8 +11,8 @@ set -gx PATH $PATH:$HOME/.local/bin
 alias cfish="nvim ~/.config/fish/config.fish"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias czsh="nvim ~/.zshrc"
-alias destroy="sudo nala purge -y "
-alias i="sudo nala install -y "
+alias destroy="sudo apt purge -y "
+alias i="sudo apt install -y "
 alias fzfs="fzf -e -i -m --wrap --preview='bat {}'"
 alias la="eza -a --color=always"
 alias lla="eza -la --color=always"
@@ -19,11 +20,11 @@ alias ll="eza -l --color=always"
 alias ls="eza --color=always"
 alias sf="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git'"
-alias v="nvim"
 
 function n
 		set -q TERMUX_VERSION && termux-notification -t "Command Completed" -c "" || echo ""
 end
+
 function cnvim
     while not nvim ~/.config/nvim/init.lua;
         echo "restarting nvim...";
@@ -58,14 +59,14 @@ end
 
 function updater
   type -q pkg && pkg uodate && pkg upgrade
-	type -q nala && sudo nala update -y && sudo nala upgrade -y && sudo nala autoremove -y && sudo nala autoclean -y
+	type -q apt && sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
 	type -q tldr && tldr --update
 	type -q brew && brew update && brew upgrade
-	type -q flatpak && flatpak update
+	type -q flatpak && flatpak update -y
 end
 
 function pkgsearch
-  type -q nala && nala search $argv && echo "\n#### nala results completed ####\n"
+  type -q apt && apt search $argv && echo "\n#### apt results completed ####\n"
 	type -q brew && brew search $argv && echo "\n#### brew results completed ####\n"
 	type -q flatpak && flatpak search $argv && echo "\n#### flatpak results completed ####\n"
 end
