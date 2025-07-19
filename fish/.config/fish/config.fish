@@ -66,9 +66,9 @@ function updater
 end
 
 function pkgsearch
-  type -q nala && nala search $argv && echo "\n#### nala results completed ####\n"
-	type -q brew && brew search $argv && echo "\n#### brew results completed ####\n"
-	type -q flatpak && flatpak search $argv && echo "\n#### flatpak results completed ####\n"
+  type -q nala && nala search $argv && echo "#### nala results completed ####"
+	type -q brew && brew search $argv && echo "#### brew results completed ####"
+	type -q flatpak && flatpak search $argv && echo "#### flatpak results completed ####"
 end
 
 function yt
