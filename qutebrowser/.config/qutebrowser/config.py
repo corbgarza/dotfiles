@@ -1,4 +1,4 @@
-config.load_autoconfig()
+config.load_autoconfig(False)
 config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 config.set('content.cookies.accept', 'all', 'devtools://*')
 config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')

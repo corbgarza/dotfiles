@@ -16,4 +16,4 @@ super + p
 super + shift + p
 	killall polybar
 super + w
-	wal -i ~/Wallpaper &
+	wal -s -t -i ~/Wallpaper &
