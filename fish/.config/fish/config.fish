@@ -11,10 +11,10 @@ set -gx PATH $PATH:$HOME/.local/bin
 alias cfish="nvim ~/.config/fish/config.fish"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias czsh="nvim ~/.zshrc"
-alias destroy="sudo apt purge -y "
+alias destroy="sudo nala purge -y "
 alias dup="docker compose up --build -d"
 alias ddown="docker compose down"
-alias i="sudo apt install -y "
+alias i="sudo nala install -y "
 alias fzfs="fzf -e -i -m --wrap --preview='bat {}'"
 alias la="eza -a --color=always"
 alias lla="eza -la --color=always"
@@ -62,14 +62,14 @@ end
 
 function updater
   type -q pkg && pkg uodate && pkg upgrade
-	type -q apt && sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
+	type -q nala && sudo nala update -y && sudo nala upgrade -y && sudo nala autoremove -y && sudo nala autoclean -y
 	type -q tldr && tldr --update
 	type -q brew && brew update && brew upgrade
 	type -q flatpak && flatpak update -y
 end
 
 function pkgsearch
-  type -q apt && apt search $argv && echo "#### apt results completed ####"
+  type -q nala && nala search $argv && echo "#### nala results completed ####"
 	type -q brew && brew search $argv && echo "#### brew results completed ####"
 	type -q flatpak && flatpak search $argv && echo "#### flatpak results completed ####"
 end
