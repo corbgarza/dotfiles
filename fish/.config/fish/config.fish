@@ -51,6 +51,7 @@ function gacpd
 	git add --all &&
 	git commit --all --message "update" &&
 	git push
+	cd -
 end
 
 function gacpp
@@ -58,6 +59,7 @@ function gacpp
 	git add --all &&
 	git commit --all --message "update" &&
 	git push
+	cd -
 end
 
 function updater
