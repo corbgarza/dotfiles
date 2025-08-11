@@ -42,7 +42,7 @@ end
 
 function search
   cd / &&
-	sudo fzf -e -i -m --wrap --preview="bat {}" 
+	 fzf -e -i -m --wrap --preview="bat {}" 
 	cd -
 end
 
