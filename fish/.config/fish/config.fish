@@ -63,7 +63,7 @@ function gacpp
 end
 
 function updater
-  type -q pkg && pkg uodate && pkg upgrade
+  type -q pkg && pkg update && pkg upgrade
 	type -q nala && sudo nala update && sudo nala upgrade -y && sudo nala autoremove -y
 	type -q tldr && tldr --update
 	type -q brew && brew update && brew upgrade
