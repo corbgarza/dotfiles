@@ -20,31 +20,13 @@ alias la="eza -a --color=always"
 alias lla="eza -la --color=always"
 alias ll="eza -l --color=always"
 alias ls="eza --color=always"
+alias n="set -q TERMUX_VERSION && termux-notification -t 'Command Completed' -c '' || echo ''"
+alias search="sudo fzf -e -i -m --wrap --preview='bat {}' "
+alias tsearch="fzf -e -i -m --wrap --preview='bat {}' "
 alias sf="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git'"
 alias vm="sudo virt-manager --fork"
 
-function n
-	set -q TERMUX_VERSION && termux-notification -t "Command Completed" -c "" || echo ""
-end
-
-function cnvim
-    while not nvim ~/.config/nvim/init.lua;
-        echo "restarting nvim...";
-    end
-end
-
-function vim
-    while not nvim $argv;
-        echo "restarting nvim";
-    end
-end
-
-function search
-  cd / &&
-	sudo fzf -e -i -m --wrap --preview="bat {}" 
-	cd -
-end
 
 function gacpd
   cd $HOME/dotfiles
@@ -77,12 +59,12 @@ function pkgsearch
 end
 
 function yt
-  set BATCH $HOME/.config/yt-dlp/yt.urls
+  set BATCH $HOME/.config/yt-dlp/urls
 	set CONFIG $HOME/.config/yt-dlp/config
 	test -d $HOME/storage/movies/ytdlp && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/ytdlp"
   if count $argv > /dev/null
 			yt-dlp --paths $PATHS --config-locations $CONFIG $argv
   else
-			yt-dlp --paths $PATHS --config-locations $CONFIG
+			yt-dlp --paths $PATHS --config-locations $CONFIG -a $BATCH
   end
 end
