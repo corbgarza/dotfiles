@@ -1,7 +1,5 @@
 --restrict-filenames
 --no-overwrites
---concurrent-fragments 4
---write-subs
---embed-subs
+--concurrent-fragments 6
 --embed-chapters
 --sponsorblock-remove sponsor

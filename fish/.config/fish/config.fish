@@ -65,6 +65,6 @@ function yt
   if count $argv > /dev/null
 			yt-dlp --paths $PATHS --config-locations $CONFIG $argv
   else
-			yt-dlp --paths $PATHS --config-locations $CONFIG -a $BATCH
+			yt-dlp --paths $PATHS --config-locations $CONFIG -a $BATCH && echo "" > $BATCH
   end
 end
