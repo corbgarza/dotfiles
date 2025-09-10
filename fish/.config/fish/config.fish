@@ -29,8 +29,8 @@ alias vm="sudo virt-manager --fork"
 
 function budget
 		set var $(awk '{s+=$2} END {print s}' $argv)
-		set var2 $(awk 'if ($1 == "investing" ) print $2' $argv)
-		set var3 $(awk 'if ($1 == "savings" ) print $2' $argv)
+		set var2 $(awk 'if ($1 == "investing" ) print $2;' $argv)
+		set var3 $(awk 'if ($1 == "savings" ) print $2;' $argv)
 		echo "Total expenses = \$$var"
 		echo "Total investing contribution = \$$var2"
 		echo "Total saving contribution = \$$var3"
