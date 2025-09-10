@@ -27,6 +27,12 @@ alias sf="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git'"
 alias vm="sudo virt-manager --fork"
 
+function budget
+		set var $(awk '{s+=$2} END {print s}' $argv)
+		echo "Total expenses = \$$var"
+		echo "Total investing contribution = \$$var2"
+		echo "Total saving contribution = \$$var3"
+end
 
 function gacpd
   cd $HOME/dotfiles
