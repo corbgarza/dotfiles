@@ -10,6 +10,7 @@ set -gx PATH $PATH:$HOME/.local/bin
 
 alias cfish="nvim ~/.config/fish/config.fish"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
+alias cytdlp="nvim ~/.config/yt-dlp/urls"
 alias czsh="nvim ~/.zshrc"
 alias destroy="sudo nala purge -y "
 alias dup="docker compose up --build --env-file $HOME/.config/docker.env -d"
