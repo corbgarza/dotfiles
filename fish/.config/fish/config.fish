@@ -24,7 +24,7 @@ alias ls="eza --color=always"
 alias n="set -q TERMUX_VERSION && termux-notification -t 'Command Completed' -c '' || echo ''"
 alias search="sudo fzf -e -i -m --wrap --preview='bat {}' "
 alias tsearch="fzf -e -i -m --wrap --preview='bat {}' "
-alias sf="source ~/.config/fish/config.fish"
+alias sfish="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git'"
 alias vm="sudo virt-manager --fork"
 
@@ -32,9 +32,10 @@ function budget
 		set var $(awk '{s+=$2} END {print s}' $argv)
 		set var2 $(awk '{if ($1 == "investing" ) print $2}' $argv)
 		set var3 $(awk '{if ($1 == "savings" ) print $2}' $argv)
+		echo "Total income = \$5400"
 		echo "Total expenses = \$$var"
-		echo "Total investing contribution = \$$var2"
-		echo "Total saving contribution = \$$var3"
+		echo "Total investing contribution goal = \$$var2"
+		echo "Total saving contribution goal = \$$var3"
 end
 
 function gacpd
