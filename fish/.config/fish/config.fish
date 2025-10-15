@@ -12,10 +12,9 @@ alias cfish="nvim ~/.config/fish/config.fish"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
 alias cytdlp="nvim ~/.config/yt-dlp/urls"
 alias czsh="nvim ~/.zshrc"
-alias destroy="sudo nala purge -y "
 alias dup="docker compose up --build --env-file $HOME/.config/docker.env -d"
 alias ddown="docker compose down"
-alias i="sudo nala install -y "
+alias ai="sudo nala install -y "
 alias fzfs="fzf -e -i -m --wrap --preview='bat {}'"
 alias la="eza -a --color=always"
 alias lla="eza -la --color=always"
@@ -33,9 +32,9 @@ function budget
 		set var2 $(awk '{if ($1 == "investing" ) print $2}' $argv)
 		set var3 $(awk '{if ($1 == "savings" ) print $2}' $argv)
 		echo "Total income = \$5400"
+		echo "Total investing contribution = \$$var2"
+		echo "Total saving contribution = \$$var3"
 		echo "Total expenses = \$$var"
-		echo "Total investing contribution goal = \$$var2"
-		echo "Total saving contribution goal = \$$var3"
 end
 
 function gacpd
