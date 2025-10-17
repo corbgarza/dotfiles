@@ -7,6 +7,7 @@ set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
 set -U fish_greeting ""
 set -gx PATH $PATH:$HOME/.local/bin
+set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
 alias cfish="nvim ~/.config/fish/config.fish"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"

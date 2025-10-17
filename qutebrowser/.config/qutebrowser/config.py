@@ -20,7 +20,7 @@ c.url.searchengines = {'DEFAULT': 'https://search.brave.com/search?q={}&source=w
                        'pdb': 'https://www.protondb.com/search?q={}'}
 config.bind(",Y", 'hint links spawn mpv {hint-url}')
 c.content.blocking.enabled = True
-c.content.blocking.method = 'adblock'
+c.content.blocking.method = 'both'
 c.content.blocking.adblock.lists = [
 "https://github.com/ewpratten/youtube_ad_blocklist/blob/master/blocklist.txt",
 "https://github.com/uBlockOrigin/uAssets/raw/master/filters/legacy.txt",
