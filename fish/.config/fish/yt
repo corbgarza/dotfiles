@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set BATCH $HOME/.config/yt-dlp/urls
+set CONFIG $HOME/.config/yt-dlp/config
+test -d $HOME/storage/movies/ytdlp && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/ytdlp"
+if count $argv > /dev/null
+	yt-dlp --paths $PATHS --config-locations $CONFIG $argv
+else
+	yt-dlp --paths $PATHS --config-locations $CONFIG -a $BATCH && echo "" > $BATCH
+end

@@ -1,0 +1,7 @@
+#!/usr/bin/env
+type -q pkg && pkg update && pkg upgrade
+type -q nala && sudo nala update && sudo nala upgrade -y && sudo nala autoremove -y
+type -q pacman && sudo pacman -Syu
+type -q tldr && tldr --update
+type -q brew && brew update && brew upgrade
+type -q flatpak && flatpak update -y

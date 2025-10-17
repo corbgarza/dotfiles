@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+type -q nala && nala search $argv && echo "#### nala results completed ####"
+type -q brew && brew search $argv && echo "#### brew results completed ####"
+type -q flatpak && flatpak search $argv && echo "#### flatpak results completed ####"

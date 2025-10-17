@@ -6,7 +6,7 @@ zoxide init fish | source
 set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
 set -U fish_greeting ""
-set -gx PATH $PATH:$HOME/.local/bin
+set -gx PATH $PATH:$HOME/.local/bin:$HOME/.config/fish
 set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
 alias cfish="nvim ~/.config/fish/config.fish"
@@ -28,54 +28,3 @@ alias tsearch="fzf -e -i -m --wrap --preview='bat {}' "
 alias sfish="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git'"
 alias vm="sudo virt-manager --fork"
-
-function budget
-		set var $(awk '{s+=$2} END {print s}' $argv)
-		set var2 $(awk '{if ($1 == "investing" ) print $2}' $argv)
-		set var3 $(awk '{if ($1 == "savings" ) print $2}' $argv)
-		echo "Total income = \$5400"
-		echo "Total investing contribution = \$$var2"
-		echo "Total saving contribution = \$$var3"
-		echo "Total expenses = \$$var"
-end
-
-function gacpd
-  cd $HOME/dotfiles
-	git add --all &&
-	git commit --all --message "update" &&
-	git push
-	cd -
-end
-
-function gacpp
-  cd $HOME/projects
-	git add --all &&
-	git commit --all --message "update" &&
-	git push
-	cd -
-end
-
-function updater
-  type -q pkg && pkg update && pkg upgrade
-	type -q nala && sudo nala update && sudo nala upgrade -y && sudo nala autoremove -y
-	type -q tldr && tldr --update
-	type -q brew && brew update && brew upgrade
-	type -q flatpak && flatpak update -y
-end
-
-function pkgsearch
-  type -q nala && nala search $argv && echo "#### nala results completed ####"
-	type -q brew && brew search $argv && echo "#### brew results completed ####"
-	type -q flatpak && flatpak search $argv && echo "#### flatpak results completed ####"
-end
-
-function yt
-  set BATCH $HOME/.config/yt-dlp/urls
-	set CONFIG $HOME/.config/yt-dlp/config
-	test -d $HOME/storage/movies/ytdlp && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/ytdlp"
-  if count $argv > /dev/null
-			yt-dlp --paths $PATHS --config-locations $CONFIG $argv
-  else
-			yt-dlp --paths $PATHS --config-locations $CONFIG -a $BATCH && echo "" > $BATCH
-  end
-end
