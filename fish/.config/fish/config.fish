@@ -2,7 +2,7 @@ if test -e /home/linuxbrew/.linuxbrew/bin/brew
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 end
 
-eval $(ssh-agent -c)
+eval $(ssh-agent -c) >/dev/null
 zoxide init fish | source
 set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
