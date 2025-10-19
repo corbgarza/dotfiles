@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 set BATCH $HOME/.config/yt-dlp/urls
 set CONFIG $HOME/.config/yt-dlp/config
 test -d $HOME/storage/movies/ytdlp && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/ytdlp"

@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env fish
 type -q pkg && pkg update && pkg upgrade
 type -q nala && sudo nala update && sudo nala upgrade -y && sudo nala autoremove -y
 type -q pacman && sudo pacman -Syu

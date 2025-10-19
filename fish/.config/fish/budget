@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 set var $(awk '{s+=$2} END {print s}' $argv)
 set var2 $(awk '{if ($1 == "investing" ) print $2}' $argv)
 set var3 $(awk '{if ($1 == "savings" ) print $2}' $argv)

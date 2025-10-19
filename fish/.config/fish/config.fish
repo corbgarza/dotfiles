@@ -7,7 +7,7 @@ set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
 set -U fish_greeting ""
 set -gx PATH $PATH:$HOME/.local/bin:$HOME/.config/fish
-set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+set SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
 alias cfish="nvim ~/.config/fish/config.fish"
 alias clickclass="xprop | grep WM_CLASS | awk '{ print \$4 }'"
@@ -15,8 +15,7 @@ alias cytdlp="nvim ~/.config/yt-dlp/urls"
 alias czsh="nvim ~/.zshrc"
 alias dup="docker compose up --build --env-file $HOME/.config/docker.env -d"
 alias ddown="docker compose down"
-alias di="sudo nala install -y "
-alias ai="sudo pacman -S"
+alias nalai="sudo nala install -y "
 alias fzfs="fzf -e -i -m --wrap --preview='bat {}'"
 alias la="eza -a --color=always"
 alias lla="eza -la --color=always"

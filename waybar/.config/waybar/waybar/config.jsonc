@@ -7,26 +7,35 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+				"hyprland/workspaces"
     ],
     "modules-center": [
     ],
     "modules-right": [
         "mpd",
-        "idle_inhibitor",
-        "pipewire",
         "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
-        "backlight",
-        "keyboard-state",
         "battery",
-        "clock",
-        "tray",
-        "custom/power"
+        "clock"
     ],
     // Modules configuration
+	"hyprland/workspaces": {
+	"format": "{name}: {icon}",
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"4": "4",
+		"5": "5",
+		"6": "6",
+		"7": "7",
+		"8": "8",
+		"9": "9",
+		"active": "*"
+	},
+	"persistent-workspaces": {
+		"*": 3 // 5 workspaces by default on every monitor
+	}
+},
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -141,7 +150,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pipewire": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",

@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 type -q nala && nala search $argv && echo "#### nala results completed ####"
 type -q brew && brew search $argv && echo "#### brew results completed ####"
 type -q flatpak && flatpak search $argv && echo "#### flatpak results completed ####"
+type -q pacman && pacman -Ss $argv && echo "#### pacman results completed ####"

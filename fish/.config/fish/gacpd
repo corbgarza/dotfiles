@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 cd $HOME/dotfiles
 git add --all &&
 git commit --all --message "update" &&
