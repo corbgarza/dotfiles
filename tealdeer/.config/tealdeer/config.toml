@@ -28,13 +28,13 @@ bold = false
 italic = false
 
 [display]
-compact = false
+compact = true
 use_pager = false
 show_title = false
 
 [updates]
-auto_update = false
-auto_update_interval_hours = 720
+auto_update = true
+auto_update_interval_hours = 24
 archive_source = "https://github.com/tldr-pages/tldr/releases/latest/download/"
 tls_backend = "rustls-with-webpki-roots"
 
