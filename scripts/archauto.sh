@@ -2,8 +2,18 @@ pkg_array=("bat" "brightnessctl" "btop" "curl" "eza" "fd" "ffmpeg" "fish" "fzf" 
 
 sudo pacman -S ${pkg_array[@]}
 
+chsh -s $(which fish)
 git clone https://github.com/corbgarza/dotfiles
-
-stow fish gitconfig hypr kitty nvim qutebrowser waybar yt-dlp
-
+rm -rf ~/.config/hypr
+stow fish gitconfig hypr kitty nvim waybar yt-dlp
 cd $HOME/dotfiles && git remote set-url origin git@github.com:corbgarza/dotfiles
+
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+paru brave-nightly-bin
+
+chsh -s $(which fish)
+
