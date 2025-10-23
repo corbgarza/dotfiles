@@ -13,29 +13,30 @@
     ],
     "modules-right": [
         "mpd",
+				"pulseaudio",
         "network",
         "battery",
         "clock"
     ],
     // Modules configuration
 	"hyprland/workspaces": {
-	"format": "{name}: {icon}",
-	"format-icons": {
-		"1": "",
-		"2": "",
-		"3": "3",
-		"4": "4",
-		"5": "5",
-		"6": "6",
-		"7": "7",
-		"8": "8",
-		"9": "9",
-		"active": "*"
-	},
-	"persistent-workspaces": {
-		"*": 2 // 5 workspaces by default on every monitor
-	}
-},
+			"format": "{name}: {icon}",
+			"format-icons": {
+				"1": "",
+				"2": "",
+				"3": "3",
+				"4": "4",
+				"5": "5",
+				"6": "6",
+				"7": "7",
+				"8": "8",
+				"9": "9"
+			},
+			"persistent-workspaces": {
+				"*": 2 // 5 workspaces by default on every monitor
+			}
+		},
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -45,6 +46,7 @@
             "unlocked": ""
         }
     },
+
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
@@ -71,6 +73,7 @@
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
+
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -78,6 +81,7 @@
             "deactivated": ""
         }
     },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10,
@@ -86,18 +90,22 @@
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         // }
     },
+
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
+
     "memory": {
         "format": "{}% "
     },
+
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -106,11 +114,13 @@
         "format": "{temperatureF}°F {icon}",
         "format-icons": ["", "", ""]
     },
+
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
+
     "battery": {
         "states": {
             // "good": 95,
@@ -126,9 +136,11 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
+
     "battery#bat2": {
         "bat": "BAT2"
     },
+
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -140,6 +152,7 @@
         "power-saver": ""
       }
     },
+
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
@@ -149,6 +162,7 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+
     "pipewire": {
         "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
@@ -168,6 +182,26 @@
         },
         "on-click": "pavucontrol"
     },
+
+		"pulseaudio": {
+			"format": "{volume}% {icon}",
+			"format-bluetooth": "{volume}% {icon}",
+			"format-muted": "",
+			"format-icons": {
+				"alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+				"alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+				"headphones": "",
+				"handsfree": "",
+				"headset": "",
+				"phone": "",
+				"phone-muted": "",
+				"portable": "",
+				"car": "",
+				"default": ["", ""]
+			},
+			"scroll-step": 1,
+			"on-click": "pavucontrol"
+		},
     "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
