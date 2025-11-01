@@ -1,6 +1,0 @@
-#!/usr/bin/env fish
-cd $HOME/projects
-git add --all &&
-git commit --all --message "update" &&
-git push
-cd -
