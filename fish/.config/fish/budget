@@ -1,8 +1,11 @@
 #!/usr/bin/env fish
-set var $(awk '{s+=$2} END {print s}' $argv)
-set var2 $(awk '{if ($1 == "investing" ) print $2}' $argv)
-set var3 $(awk '{if ($1 == "savings" ) print $2}' $argv)
-echo "Total income = \$5400"
+set income 5400
+set expenses (math $income x 0.75)
+set var $(awk '{e+=$2} END {print e}' $argv)
+set var2 $(awk '{if ($1 ~ "investing" ) i+=$2} END  {print i}' $argv)
+set var3 $(awk '{if ($1 ~ "savings" ) s+=$2} END {print s}' $argv)
+echo "Total income = \$$income"
+echo "Max expenses = \$$expenses"
 echo "Total investing contribution = \$$var2"
 echo "Total saving contribution = \$$var3"
 echo "Total expenses = \$$var"
