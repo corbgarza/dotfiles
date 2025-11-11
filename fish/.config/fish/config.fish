@@ -3,7 +3,6 @@ if test -e /home/linuxbrew/.linuxbrew/bin/brew
 end
 
 eval $(ssh-agent -c) >/dev/null
-eval $(ssh-add ~/.ssh/id_github) >/dev/null
 zoxide init fish | source
 set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
@@ -15,7 +14,7 @@ alias cytdlp="nvim ~/.config/yt-dlp/urls"
 alias czsh="nvim ~/.zshrc"
 alias fzfl="sudo fzf -e -i -m --wrap --preview='bat {}' "
 alias fzft="fzf -e -i -m --wrap --preview='bat {}'"
-alias gacp="git add -A && git commit && git push"
+alias gacp="ssh-add ~/.ssh/id_github && git add -A && git commit && git push"
 alias la="eza -a --color=always"
 alias lla="eza -la --color=always"
 alias ll="eza -l --color=always"
