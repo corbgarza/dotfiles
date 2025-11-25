@@ -1,11 +1,17 @@
 #!/usr/bin/env fish
+set exp $(awk '{e+=$2} END {print e}' $argv)
+set invs $(awk '/invest/ {print $2}' $argv)
+set save $(awk '/sav/ {print $2}' $argv)
 set income 5400
 set expenses (math $income x 0.75)
-set var $(awk '{e+=$2} END {print e}' $argv)
-set var2 $(awk '{if ($1 ~ "investing" ) i+=$2} END  {print i}' $argv)
-set var3 $(awk '{if ($1 ~ "savings" ) s+=$2} END {print s}' $argv)
+set net_gain (math $income - $exp)
+set invs_goal (math $income x 0.15)
+set save_goal (math $income x 0.10)
 echo "Total income = \$$income"
 echo "Max expenses = \$$expenses"
-echo "Total investing contribution = \$$var2"
-echo "Total saving contribution = \$$var3"
-echo "Total expenses = \$$var"
+echo "Recurring expenses = \$$exp"
+echo "Net gain = \$$net_gain"
+echo "Investing goal = \$$invs_goal"
+echo "Total investing contribution = \$$invs"
+echo "Savings goal \$$save_goal"
+echo "Total saving contribution = \$$save"
