@@ -23,3 +23,4 @@ alias n="set -q TERMUX_VERSION && termux-notification -t 'Command Completed' -c 
 alias sfish="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git'"
 alias v="nvim"
+alias ytlfs="yt-dlp --list-formats --list-subs"
