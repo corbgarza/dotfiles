@@ -35,7 +35,7 @@
 //				"active": "⭐"
 			},
 			"persistent-workspaces": {
-				"*": 3 // 5 workspaces by default on every monitor
+				"*": 2 // 5 workspaces by default on every monitor
 			}
 		},
 
