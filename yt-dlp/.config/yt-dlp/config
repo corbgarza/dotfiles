@@ -2,4 +2,6 @@
 --no-overwrites
 --concurrent-fragments 6
 --embed-chapters
+--progress-delta 1
+--embed-subtitles
 
