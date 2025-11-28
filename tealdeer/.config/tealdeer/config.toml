@@ -34,7 +34,7 @@ show_title = false
 
 [updates]
 auto_update = true
-auto_update_interval_hours = 24
+auto_update_interval_hours = 96
 archive_source = "https://github.com/tldr-pages/tldr/releases/latest/download/"
 tls_backend = "rustls-with-webpki-roots"
 
