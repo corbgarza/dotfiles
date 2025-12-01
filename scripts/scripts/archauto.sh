@@ -1,4 +1,4 @@
-pkg_array=("bat" "brightnessctl" "btop" "curl" "deno" "eza" "fastfetch" "feh" "fd" "ffmpeg" "fish" "fzf" "gcc" "git" "imagemagick" "kitty" "man-db" "mpv" "neovim" "networkmanager" "noto-fonts" "os-prober" "openssh" "otf-font-awesome" "pulseaudio" "python3" "qutebrowser" "rclone" "ripgrep" "stow" "swaybg" "tealdeer" "tree" "ttf-arimo-nerd" "tmux" "udiskie" "vlc" "waybar" "wireplumber" "wofi" "yazi" "yt-dlp" "zoxide")
+pkg_array=("bat" "brightnessctl" "btop" "curl" "deno" "eza" "fastfetch" "feh" "fd" "ffmpeg" "fish" "fzf" "gcc" "git" "imagemagick" "kitty" "man-db" "mpv" "neovim" "networkmanager" "noto-fonts" "os-prober" "openssh" "otf-font-awesome" "pulseaudio" "python3" "qutebrowser" "rclone" "ripgrep" "stow" "swaybg" "tealdeer" "tree" "ttf-jetbrains-mono-nerd" "tmux" "udiskie" "vlc" "waybar" "wireplumber" "wofi" "yazi" "yt-dlp" "zoxide")
 
 sudo pacman -S ${pkg_array[@]}
 

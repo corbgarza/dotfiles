@@ -31,8 +31,9 @@
 				"6": "*",
 				"7": "*",
 				"8": "*",
-				"9": "*"
-//				"active": "⭐"
+				"9": "*",
+				"10": "*",
+				"active": "⭐"
 			},
 			"persistent-workspaces": {
 				"*": 2 // 5 workspaces by default on every monitor
