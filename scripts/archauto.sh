@@ -4,8 +4,9 @@ sudo pacman -S ${pkg_array[@]}
 
 chsh -s $(which fish)
 git clone https://github.com/corbgarza/dotfiles
+#git clone git@github.com:corbgarza/dotfiles
 rm -rf ~/.config/hypr
-stow fish gitconfig hypr kitty nvim scripts tealdeer waybar yt-dlp
+stow fish gitconfig hypr kitty nvim tealdeer waybar yt-dlp
 cd $HOME/dotfiles && git remote set-url origin git@github.com:corbgarza/dotfiles
 sudo systemctl enable NetworkManager.service
 
