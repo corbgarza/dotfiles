@@ -17,11 +17,11 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 5
 vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.opt.tabstop = 2
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.undofile = true
 vim.opt.scs = true
 vim.opt.shiftwidth = 4
