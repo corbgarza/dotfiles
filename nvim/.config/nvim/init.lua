@@ -14,7 +14,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.scrolloff = 5
@@ -69,6 +68,7 @@ spec = {
 				    vim.g.coq_settings = { auto_start = 'shut-up' }end,
 				},
 },
+rocks = {enabled = false},
 })
 
 vim.cmd[[colorscheme tokyonight-night]]
