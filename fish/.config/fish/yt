@@ -1,9 +1,13 @@
 #!/usr/bin/env fish
 set BATCH $HOME/.config/yt-dlp/urls
 set CONFIG $HOME/.config/yt-dlp/config
+set OLD $HOME/.config/yt-dlp/urls.old
 test -d $HOME/storage/movies/ytdlp && set PATHS "$HOME/storage/movies/ytdlp" || set PATHS "$HOME/ytdlp"
-if count $argv > /dev/null
+set ALTPATH $HOME/storage/movies/other
+if test "$argv" = "" > /dev/null
 	yt-dlp --paths $PATHS --config-locations $CONFIG $argv
-else
-	yt-dlp --paths $PATHS --config-locations $CONFIG -a $BATCH && echo "" > $BATCH
+else if test "$argv" = "-b"
+	yt-dlp --paths $PATHS --config-locations $CONFIG -a $BATCH && cat $BATCH >> $OLD && echo "" > $BATCH
+else if test "$argv" = "-p"
+  yt-dlp --paths $ALTPATH --config-locations $CONFIG -a $BATCH && cat $BATCH >> $OLD && echo "" > $BATCH
 end
