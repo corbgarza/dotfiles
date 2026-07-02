@@ -14,10 +14,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 5
 vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.opt.tabstop = 2
@@ -65,10 +64,9 @@ spec = {
 				{ "ms-jpq/coq_nvim", branch = "coq" }, 
 				{ "ms-jpq/coq.artifacts", branch = "artifacts" },
 				},
-				  init = function()
-				    vim.g.coq_settings = { auto_start = 'shut-up' }end,
 				},
 },
+rocks = {enabled = false},
 })
 
 vim.cmd[[colorscheme tokyonight-night]]

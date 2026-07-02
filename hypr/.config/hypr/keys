@@ -1,0 +1,10 @@
+return;terminal
+Q;killactive
+V;togglefloating
+Space;wofi
+M;moonlight
+B;brave
+W;changewallpaper
+ShiftW;defaultwall
+E;emojis
+F;fullscreen
