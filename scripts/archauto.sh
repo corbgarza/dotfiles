@@ -1,4 +1,4 @@
-pkg_array=("bat" "brightnessctl" "curl" "deno" "dolphin" "dunst" "eza" "fastfetch" "feh" "fd" "ffmpeg" "fish" "fzf" "gcc" "git" "htop" "imagemagick" "kitty" "ly" "man-db" "moonlight" "neovim" "networkmanager" "nmap" "opendoas" "openssh" "os-prober" "pulseaudio" "python3" "qutebrowser" "rclone" "resolvconf" "ripgrep" "stow" "swaybg" "swaylock" "systemd-resolvconf" "tailscale" "tealdeer" "traceroute" "tree" "ttf-jetbrains-mono-nerd" "tmux" "udiskie" "unzip" "vlc" "waybar" "wayclip" "wget" "wofi" "yazi" "yt-dlp" "zip" "zoxide")
+pkg_array=("bat" "brightnessctl" "curl" "deno" "dolphin" "dunst" "eza" "fastfetch" "feh" "fd" "ffmpeg" "fish" "fzf" "gcc" "git" "gnome-characters" "htop" "imagemagick" "kitty" "ly" "man-db" "moonlight" "neovim" "networkmanager" "nmap" "npm" "opendoas" "openssh" "os-prober" "proton-vpn-gtk-app" "pulseaudio" "python3" "qutebrowser" "rclone" "resolvconf" "ripgrep" "stow" "swaybg" "swaylock" "systemd-resolvconf" "tailscale" "tealdeer" "traceroute" "tree" "ttf-jetbrains-mono-nerd" "tmux" "udiskie" "unzip" "vlc" "waybar" "wayclip" "wget" "wofi" "yazi" "yt-dlp" "zip" "zoxide")
 
 sudo pacman -S ${pkg_array[@]}
 
