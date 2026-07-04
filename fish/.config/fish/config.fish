@@ -7,7 +7,7 @@ set -gx EDITOR $(which nvim)
 set -gx VISUAL $(which nvim)
 set -U fish_greeting ""
 set -gx PATH $PATH:$HOME/.local/bin:$HOME/.config/fish
-#set -gx SSH_AUTH_SOCK "$PREFIX/var/run/ssh-agent.socket"
+set -gx SSH_AUTH_SOCK "$PREFIX/var/run/ssh-agent.socket"
 eval $(ssh-agent -c) > /dev/null
 
 alias cfish="nvim ~/.config/fish/config.fish"
