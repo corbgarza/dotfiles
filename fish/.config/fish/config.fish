@@ -20,3 +20,7 @@ alias fzft="fzf -e -i -m --wrap --preview='bat {}'"
 alias gacp="git add -A && git commit && git push"
 alias sfish="source ~/.config/fish/config.fish"
 alias treee="tree -a -C -I '.git'"
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/corbgarza/.local/bin" $PATH
